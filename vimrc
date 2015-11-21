@@ -22,11 +22,11 @@ call vundle#end()
 filetype plugin indent on
 
 set t_Co=256
-set background=dark
 if has('gui_running')
-  set guifont=FiraMono-Regular:h15
+  set guifont=Inconsolata:h16
   colorscheme atom
 else
+  set background=light
   colorscheme solarized
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme

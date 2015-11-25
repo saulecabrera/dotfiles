@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'wting/rust.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jiangmiao/auto-pairs'
@@ -26,11 +27,11 @@ if has('gui_running')
   set guifont=Inconsolata:h16
   colorscheme atom
 else
-  set background=light
-  colorscheme solarized
+  set background=dark
+  colorscheme gruvbox
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
-  let g:solarized_termcolors=16
+  "let g:solarized_termcolors=16
 endif
 set cursorline
 set number

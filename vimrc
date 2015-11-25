@@ -29,10 +29,11 @@ if has('gui_running')
   colorscheme atom
 else
   set background=dark
-  colorscheme Tomorrow-Night
+  colorscheme solarized
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
-  "let g:solarized_termcolors=16
+  let g:solarized_termcolors=16
+  let g:solarized_contrast="high"
 endif
 set cursorline
 set number

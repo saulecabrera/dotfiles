@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'morhetz/gruvbox'
 Plugin 'wting/rust.vim'
 Plugin 'altercation/vim-colors-solarized'
@@ -28,7 +29,7 @@ if has('gui_running')
   colorscheme atom
 else
   set background=dark
-  colorscheme gruvbox
+  colorscheme Tomorrow-Night
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
   "let g:solarized_termcolors=16

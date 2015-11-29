@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'whatyouhide/vim-gotham'
 Plugin 'morhetz/gruvbox'
 Plugin 'wting/rust.vim'
 Plugin 'altercation/vim-colors-solarized'
@@ -29,11 +30,11 @@ if has('gui_running')
   colorscheme atom
 else
   set background=dark
-  colorscheme solarized
+  colorscheme gotham
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
-  let g:solarized_termcolors=16
-  let g:solarized_contrast="high"
+  "let g:solarized_termcolors=16
+  "let g:solarized_contrast="high"
 endif
 set cursorline
 set number

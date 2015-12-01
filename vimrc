@@ -4,7 +4,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'wting/rust.vim'

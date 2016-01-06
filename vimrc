@@ -47,3 +47,9 @@ set softtabstop=2
 let g:airline#extensions#tabline#enabled = 1 "showing buffer tabs
 let g:airline_powerline_fonts = 0
 set laststatus=2 "for vim-airline to work
+
+"disabling arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>

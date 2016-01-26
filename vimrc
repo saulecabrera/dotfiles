@@ -20,6 +20,7 @@ Plugin 'bling/vim-airline'
 Plugin 'mxw/vim-jsx'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'junegunn/goyo.vim'
+Plugin 'w0ng/vim-hybrid'
 call vundle#end()
 filetype plugin indent on
 
@@ -29,7 +30,9 @@ if has('gui_running')
   colorscheme atom
 else
   set background=dark
-  colorscheme gotham
+  let g:hybrid_reduced_contrast = 1
+  let g:hybrid_use_Xresources = 1
+  colorscheme hybrid
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
   "let g:solarized_termcolors=16

@@ -30,7 +30,7 @@ if has('gui_running')
   colorscheme atom
 else
   set background=dark
-  let g:hybrid_reduced_contrast = 1
+  "let g:hybrid_reduced_contrast = 1
   let g:hybrid_use_Xresources = 1
   colorscheme hybrid
   "16 if solarized is the current terminal theme

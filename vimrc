@@ -22,6 +22,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'junegunn/goyo.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'morhetz/gruvbox'
+Plugin 'chriskempson/tomorrow-theme'
 call vundle#end()
 filetype plugin indent on
 
@@ -33,8 +34,8 @@ else
   set background=dark
   "let g:hybrid_reduced_contrast = 1
   "let g:hybrid_use_Xresources = 1
-  colorscheme gruvbox
-  let g:gruvbox_termcolors=16
+  colorscheme tomorrow-night
+  "let g:gruvbox_termcolors=16
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
   "let g:solarized_termcolors=16

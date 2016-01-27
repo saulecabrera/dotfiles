@@ -21,6 +21,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'junegunn/goyo.vim'
 Plugin 'w0ng/vim-hybrid'
+Plugin 'morhetz/gruvbox'
 call vundle#end()
 filetype plugin indent on
 
@@ -31,8 +32,9 @@ if has('gui_running')
 else
   set background=dark
   "let g:hybrid_reduced_contrast = 1
-  let g:hybrid_use_Xresources = 1
-  colorscheme hybrid
+  "let g:hybrid_use_Xresources = 1
+  colorscheme gruvbox
+  let g:gruvbox_termcolors=16
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
   "let g:solarized_termcolors=16

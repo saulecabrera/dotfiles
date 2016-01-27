@@ -23,6 +23,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'morhetz/gruvbox'
 Plugin 'chriskempson/tomorrow-theme'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 call vundle#end()
 filetype plugin indent on
 

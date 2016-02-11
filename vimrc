@@ -23,19 +23,19 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'morhetz/gruvbox'
 Plugin 'chriskempson/tomorrow-theme'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'lsdr/monokai'
 call vundle#end()
 filetype plugin indent on
 
 set t_Co=256
 if has('gui_running')
   set guifont=Inconsolata:h16
-  colorscheme atom
+  colorscheme hybrid
 else
   set background=dark
-  let g:hybrid_reduced_contrast = 1
-  let g:hybrid_use_Xresources = 1
-  colorscheme hybrid
+  "let g:hybrid_reduced_contrast = 1
+  "let g:hybrid_use_Xresources = 1
+  colorscheme tomorrow
   "let g:gruvbox_termcolors=16
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme

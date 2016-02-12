@@ -29,8 +29,8 @@ filetype plugin indent on
 
 set t_Co=256
 if has('gui_running')
-  set guifont=Menlo:h12
-  colorscheme tomorrow-night
+  set guifont=Menlo:h13.5
+  colorscheme gruvbox
 else
   set background=dark
   "let g:hybrid_reduced_contrast = 1

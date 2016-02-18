@@ -32,10 +32,10 @@ if has('gui_running')
   set guifont=Menlo:h13.5
   colorscheme gruvbox
 else
-  set background=dark
+  set background=light
   "let g:hybrid_reduced_contrast = 1
   "let g:hybrid_use_Xresources = 1
-  colorscheme gotham
+  colorscheme solarized
   "let g:gruvbox_termcolors=16
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme

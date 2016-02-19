@@ -24,18 +24,20 @@ Plugin 'w0ng/vim-hybrid'
 Plugin 'morhetz/gruvbox'
 Plugin 'chriskempson/tomorrow-theme'
 Plugin 'lsdr/monokai'
+Plugin 'trusktr/seti.vim'
 call vundle#end()
 filetype plugin indent on
 
-set t_Co=256
 if has('gui_running')
   set guifont=Menlo:h13.5
-  colorscheme gruvbox
+  colorscheme hybrid
 else
-  set background=light
-  "let g:hybrid_reduced_contrast = 1
+  set term=screen-256color
+  set t_Co=256
+  set background=dark
+  let g:hybrid_reduced_contrast = 1
   "let g:hybrid_use_Xresources = 1
-  colorscheme solarized
+  colorscheme hybrid
   "let g:gruvbox_termcolors=16
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme

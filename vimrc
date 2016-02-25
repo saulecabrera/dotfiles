@@ -29,7 +29,7 @@ call vundle#end()
 filetype plugin indent on
 
 if has('gui_running')
-  set guifont=Menlo:h13.5
+  set guifont=Consolas:h14
   colorscheme gruvbox
 else
   set term=screen-256color

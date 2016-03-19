@@ -57,6 +57,9 @@ let g:airline#extensions#tabline#enabled = 1 "showing buffer tabs
 let g:airline_powerline_fonts = 0
 set laststatus=2 "for vim-airline to work
 
+"enable jsx in files with js extension
+let g:jsx_ext_required = 0
+
 "disabling arrow keys
 noremap <Up> <Nop>
 noremap <Down> <Nop>

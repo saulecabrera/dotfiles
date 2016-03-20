@@ -30,15 +30,15 @@ filetype plugin indent on
 
 if has('gui_running')
   set guifont=CamingoCode:h14
-  colorscheme gruvbox
+  colorscheme gotham
 else
   set term=screen-256color
   set t_Co=256
   set background=dark
   "let g:hybrid_reduced_contrast = 1
   "let g:hybrid_use_Xresources = 1
-  colorscheme gruvbox
-  let g:gruvbox_termcolors=16
+  colorscheme gotham
+  "let g:gruvbox_termcolors=16
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
   "let g:solarized_termcolors=16
@@ -59,6 +59,11 @@ set laststatus=2 "for vim-airline to work
 
 "enable jsx in files with js extension
 let g:jsx_ext_required = 0
+
+"enabling comments in italics
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic
 
 "disabling arrow keys
 noremap <Up> <Nop>

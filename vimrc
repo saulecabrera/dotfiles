@@ -31,7 +31,7 @@ filetype plugin indent on
 if has('gui_running')
   set guifont=Monaco:h12
   set background=dark
-  colorscheme lucario
+  colorscheme atom
 else
   set term=screen-256color
   set t_Co=256

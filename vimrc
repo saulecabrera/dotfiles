@@ -29,16 +29,18 @@ call vundle#end()
 filetype plugin indent on
 
 if has('gui_running')
-  set guifont=CamingoCode:h14
-  colorscheme gotham
+  set guifont=Monaco:h12
+  let g:hybrid_reduced_contrast = 1
+  let g:hybrid_use_Xresources = 1
+  colorscheme hybrid 
 else
   set term=screen-256color
   set t_Co=256
   set background=dark
+  colorscheme gruvbox
   "let g:hybrid_reduced_contrast = 1
   "let g:hybrid_use_Xresources = 1
-  colorscheme gotham
-  "let g:gruvbox_termcolors=16
+  let g:gruvbox_termcolors=16
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
   "let g:solarized_termcolors=16

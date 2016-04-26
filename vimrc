@@ -30,9 +30,8 @@ filetype plugin indent on
 
 if has('gui_running')
   set guifont=Monaco:h12
-  let g:hybrid_reduced_contrast = 1
-  let g:hybrid_use_Xresources = 1
-  colorscheme hybrid 
+  set background=dark
+  colorscheme lucario
 else
   set term=screen-256color
   set t_Co=256

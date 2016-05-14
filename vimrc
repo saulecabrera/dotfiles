@@ -34,7 +34,7 @@ else
   set term=screen-256color
   set t_Co=256
   set background=dark
-  "colorscheme gruvbox
+  colorscheme solarized
   "let g:hybrid_reduced_contrast = 1
   "let g:hybrid_use_Xresources = 1
   "let g:gruvbox_termcolors=16

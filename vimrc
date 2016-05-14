@@ -4,14 +4,12 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'wting/rust.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'pangloss/vim-javascript'
 Plugin 'gregsexton/Atom'
-Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'raphamorim/lucario'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-markdown'
@@ -36,10 +34,10 @@ else
   set term=screen-256color
   set t_Co=256
   set background=dark
-  colorscheme gruvbox
+  "colorscheme gruvbox
   "let g:hybrid_reduced_contrast = 1
   "let g:hybrid_use_Xresources = 1
-  let g:gruvbox_termcolors=16
+  "let g:gruvbox_termcolors=16
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
   "let g:solarized_termcolors=16

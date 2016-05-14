@@ -10,7 +10,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'pangloss/vim-javascript'
 Plugin 'gregsexton/Atom'
-Plugin 'raphamorim/lucario'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-fugitive'
@@ -21,8 +20,6 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'morhetz/gruvbox'
 Plugin 'chriskempson/tomorrow-theme'
-Plugin 'lsdr/monokai'
-Plugin 'trusktr/seti.vim'
 call vundle#end()
 filetype plugin indent on
 

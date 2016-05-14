@@ -27,6 +27,7 @@ if has('gui_running')
   set guifont=Monaco:h14
   set background=dark
   colorscheme gruvbox
+  set guioptions-=r
 else
   set term=screen-256color
   set t_Co=256

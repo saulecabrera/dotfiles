@@ -28,7 +28,9 @@ if has('gui_running')
   set background=dark
   colorscheme gruvbox
   set guioptions-=R
+  set guioptions-=r
   set guioptions-=L
+  set guioptions-=l
 else
   set term=screen-256color
   set t_Co=256

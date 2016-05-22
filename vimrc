@@ -24,7 +24,7 @@ call vundle#end()
 filetype plugin indent on
 
 if has('gui_running')
-  set guifont=Monaco:h14.5
+  set guifont=Menlo:h14
   set background=dark
   colorscheme gruvbox
   set guioptions-=R

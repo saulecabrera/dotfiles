@@ -9,7 +9,6 @@ Plugin 'wting/rust.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'pangloss/vim-javascript'
-Plugin 'gregsexton/Atom'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-fugitive'
@@ -17,9 +16,8 @@ Plugin 'bling/vim-airline'
 Plugin 'mxw/vim-jsx'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'junegunn/goyo.vim'
-Plugin 'w0ng/vim-hybrid'
 Plugin 'morhetz/gruvbox'
-Plugin 'chriskempson/tomorrow-theme'
+Plugin 'chriskempson/vim-tomorrow-theme'
 call vundle#end()
 filetype plugin indent on
 
@@ -27,6 +25,7 @@ if has('gui_running')
   set guifont=Menlo:h14
   set background=dark
   colorscheme gruvbox
+  let g:gruvbox_contrast_dark='hard'
   set guioptions-=R
   set guioptions-=r
   set guioptions-=L

@@ -22,10 +22,10 @@ call vundle#end()
 filetype plugin indent on
 
 if has('gui_running')
-  set guifont=Menlo:h14.5
+  set guifont=Monaco:h14
   set background=dark
-  colorscheme gruvbox
-  let g:gruvbox_contrast_dark='hard'
+  colorscheme solarized
+  "let g:gruvbox_contrast_dark='hard'
   set guioptions-=R
   set guioptions-=r
   set guioptions-=L

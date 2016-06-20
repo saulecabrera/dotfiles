@@ -26,7 +26,6 @@ if has('gui_running')
   set guifont=Monaco:h14
   set background=dark
   colorscheme solarized
-  "let g:gruvbox_contrast_dark='hard'
   set guioptions-=R
   set guioptions-=r
   set guioptions-=L

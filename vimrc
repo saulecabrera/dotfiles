@@ -19,6 +19,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'junegunn/goyo.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'groenewege/vim-less'
 call vundle#end()
 filetype plugin indent on
 

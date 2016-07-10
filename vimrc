@@ -20,6 +20,9 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-classpath'
+Plugin 'guns/vim-clojure-static'
 call vundle#end()
 filetype plugin indent on
 

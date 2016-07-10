@@ -55,6 +55,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set ignorecase
+set hlsearch
 
 "use Inconsolata 16.5 for text and 14 for non-ASCII 
 let g:airline_theme = 'solarized'

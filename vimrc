@@ -81,6 +81,14 @@ let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 highlight Comment cterm=italic
 
+"vim-instant-markdown config
+"display changes on save
+let g:instant_markdown_slow = 1
+
+"do not auto start plugin on opening a markdown buffer
+"start the plugin manually with :InstantMarkdownPreview
+let g:instant_markdown_autostart = 0
+
 "disabling arrow keys
 noremap <Up> <Nop>
 noremap <Down> <Nop>

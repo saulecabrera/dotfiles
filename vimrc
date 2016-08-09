@@ -63,7 +63,9 @@ set hlsearch
 "use Inconsolata 16.5 for text and 14 for non-ASCII 
 let g:airline_theme = 'solarized'
 let g:airline_solarized_normal_green = 1
-let g:airline#extensions#tabline#enabled = 1 "showing buffer tabs
+
+"showing buffer tabs
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
 let g:airline_powerline_fonts = 1

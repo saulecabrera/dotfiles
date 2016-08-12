@@ -71,10 +71,6 @@ let g:airline_right_sep = ' '
 let g:airline_powerline_fonts = 1
 set laststatus=2 "for vim-airline to work
 
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
 "enable jsx in files with js extension
 let g:jsx_ext_required = 0
 

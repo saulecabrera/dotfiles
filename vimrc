@@ -31,7 +31,7 @@ filetype plugin indent on
 if has('gui_running')
   set guifont=Monaco:h14
   set background=dark
-  colorscheme solarized
+  colorscheme gruvbox
   set guioptions-=R
   set guioptions-=r
   set guioptions-=L
@@ -40,7 +40,7 @@ else
   set term=screen-256color
   set t_Co=256
   set background=dark
-  colorscheme solarized
+  colorscheme gruvbox
   "let g:hybrid_reduced_contrast = 1
   "let g:hybrid_use_Xresources = 1
   "let g:gruvbox_termcolors=16

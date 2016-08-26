@@ -43,7 +43,7 @@ else
   colorscheme gruvbox
   "let g:hybrid_reduced_contrast = 1
   "let g:hybrid_use_Xresources = 1
-  "let g:gruvbox_termcolors=16
+  let g:gruvbox_termcolors=16
   "16 if solarized is the current terminal theme
   "256 if solarized is not the current terminal theme
   "let g:solarized_termcolors=16

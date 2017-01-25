@@ -65,10 +65,11 @@ let g:airline_theme = 'gruvbox'
 let g:airline_solarized_normal_green = 1
 
 "showing buffer tabs
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_left_sep = ' '
-let g:airline_right_sep = ' '
+let g:airline#extensions#tabline#enabled = 0
+let g:airline_left_sep = '>'
+let g:airline_right_sep = '<'
 let g:airline_powerline_fonts = 1
+let g:airline_theme='base16'
 set laststatus=2 "for vim-airline to work
 
 "enable jsx in files with js extension
@@ -86,6 +87,9 @@ let g:instant_markdown_slow = 1
 "do not auto start plugin on opening a markdown buffer
 "start the plugin manually with :InstantMarkdownPreview
 let g:instant_markdown_autostart = 0
+
+"omnicompletion
+set omnifunc=syntaxcomplete#Complete
 
 "disabling arrow keys
 noremap <Up> <Nop>

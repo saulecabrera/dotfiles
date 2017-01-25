@@ -37,17 +37,15 @@ if has('gui_running')
   set guioptions-=L
   set guioptions-=l
 else
-  set term=screen-256color
-  set t_Co=256
+  if $TERM_PROGRAM =~ "iTerm"
+    set termguicolors
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  endif
   set background=dark
   colorscheme gruvbox
-  "let g:hybrid_reduced_contrast = 1
-  "let g:hybrid_use_Xresources = 1
-  let g:gruvbox_termcolors=16
-  "16 if solarized is the current terminal theme
-  "256 if solarized is not the current terminal theme
-  "let g:solarized_termcolors=16
-  "let g:solarized_contrast="high"
+  let g:gruvbox_termcolors=256
+  let g:gruvbox_contrast_dark="hard"
 endif
 set cursorline
 set number
@@ -60,16 +58,13 @@ set softtabstop=2
 set ignorecase
 set hlsearch
 
-"use Inconsolata 16.5 for text and 14 for non-ASCII 
-let g:airline_theme = 'gruvbox'
-let g:airline_solarized_normal_green = 1
-
-"showing buffer tabs
+"airline configuration
 let g:airline#extensions#tabline#enabled = 0
 let g:airline_left_sep = '>'
 let g:airline_right_sep = '<'
 let g:airline_powerline_fonts = 1
-let g:airline_theme='base16'
+let g:airline_solarized_normal_green = 1
+let g:airline_theme = 'gruvbox'
 set laststatus=2 "for vim-airline to work
 
 "enable jsx in files with js extension
@@ -78,17 +73,16 @@ let g:jsx_ext_required = 0
 "enabling comments in italics
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
-highlight Comment cterm=italic
+"highlight Comment cterm=italic
 
 "vim-instant-markdown config
 "display changes on save
 let g:instant_markdown_slow = 1
-
 "do not auto start plugin on opening a markdown buffer
 "start the plugin manually with :InstantMarkdownPreview
 let g:instant_markdown_autostart = 0
 
-"omnicompletion
+"omnicompletion configuration
 set omnifunc=syntaxcomplete#Complete
 
 "disabling arrow keys

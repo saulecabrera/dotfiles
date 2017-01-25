@@ -26,6 +26,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 filetype plugin indent on
 
@@ -91,3 +92,6 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+"gitgutter
+set updatetime=250

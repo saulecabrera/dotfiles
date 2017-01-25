@@ -25,6 +25,7 @@ Plugin 'tpope/vim-classpath'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'slashmili/alchemist.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 filetype plugin indent on
 

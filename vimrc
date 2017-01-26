@@ -30,6 +30,13 @@ Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 filetype plugin indent on
 
+"mapping
+let mapleader = "\<Space>"
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>gw :Gwrite<CR>
+nnoremap <Leader>gc :Gcommit<CR>
+
 if has('gui_running')
   set guifont=Monaco:h14
   set background=dark

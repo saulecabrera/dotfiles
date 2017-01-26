@@ -27,6 +27,7 @@ Plugin 'guns/vim-clojure-highlight'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
 call vundle#end()
 filetype plugin indent on
 

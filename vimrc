@@ -37,6 +37,7 @@ nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>E :Explore<CR>
 
 if has('gui_running')
   set guifont=Monaco:h14

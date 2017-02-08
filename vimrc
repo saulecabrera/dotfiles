@@ -28,6 +28,7 @@ Plugin 'slashmili/alchemist.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'ervandew/supertab'
 call vundle#end()
 filetype plugin indent on
 

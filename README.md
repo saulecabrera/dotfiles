@@ -1,6 +1,4 @@
-# Dotfiles Backup - Mostly Vim
-
-## vimrc
+## Usage
 ```bash
 $ cd ~/path/to/a/dir
 $ git clone https://github.com/saulecabrera/dotfiles 

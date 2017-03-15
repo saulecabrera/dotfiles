@@ -29,6 +29,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'ervandew/supertab'
+Plugin 'ryanoasis/vim-devicons'
 call vundle#end()
 filetype plugin indent on
 
@@ -105,3 +106,5 @@ noremap <Right> <Nop>
 
 "gitgutter
 set updatetime=250
+
+set encoding=utf-8

@@ -29,7 +29,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'ervandew/supertab'
-Plugin 'ryanoasis/vim-devicons'
 call vundle#end()
 filetype plugin indent on
 
@@ -42,7 +41,8 @@ nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>x :Explore<CR>
 
 if has('gui_running')
-  set guifont=Monaco:h14
+  set macligatures
+  set guifont=Fira\ Code:h13
   set background=dark
   colorscheme gruvbox
   set guioptions-=R
@@ -106,5 +106,3 @@ noremap <Right> <Nop>
 
 "gitgutter
 set updatetime=250
-
-set encoding=utf-8

@@ -75,7 +75,7 @@ set hlsearch
 let g:airline#extensions#tabline#enabled = 0
 let g:airline_left_sep = '>'
 let g:airline_right_sep = '<'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline_solarized_normal_green = 1
 let g:airline_theme = 'gruvbox'
 set laststatus=2 "for vim-airline to work

@@ -42,7 +42,7 @@ nnoremap <Leader>x :Explore<CR>
 
 if has('gui_running')
   set macligatures
-  set guifont=DejaVu\ LGC\ Sans\ Code:h13
+  set guifont=DejaVu\ Sans\ Code:h13
   set background=dark
   colorscheme gruvbox
   set guioptions-=R

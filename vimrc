@@ -43,7 +43,6 @@ nnoremap <Leader>x :Explore<CR>
 if has('gui_running')
   set macligatures
   set guifont=DejaVu\ Sans\ Code:h13
-  set background=dark
   colorscheme gruvbox
   set guioptions-=R
   set guioptions-=r
@@ -55,11 +54,11 @@ else
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   endif
-  set background=dark
   colorscheme gruvbox
   let g:gruvbox_termcolors=256
   let g:gruvbox_contrast_dark="medium" "default
 endif
+set background=dark
 set cursorline
 set number
 syntax on

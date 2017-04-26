@@ -56,7 +56,7 @@ else
   endif
   colorscheme gruvbox
   let g:gruvbox_termcolors=256
-  let g:gruvbox_contrast_dark="medium" "default
+  let g:gruvbox_contrast_dark="dark"
 endif
 set background=dark
 set cursorline

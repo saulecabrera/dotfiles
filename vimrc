@@ -40,6 +40,9 @@ nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>x :Explore<CR>
 
+"workaround for nvim clipboard
+vnoremap <LeftRelease> "*ygv
+
 if has('gui_running')
   set macligatures
   set guifont=DejaVu\ Sans\ Code:h13

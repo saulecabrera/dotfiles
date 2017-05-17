@@ -4,29 +4,50 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+
+"Colors
 Plugin 'whatyouhide/vim-gotham'
-Plugin 'wting/rust.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mxw/vim-jsx'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'junegunn/goyo.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'groenewege/vim-less'
+
+"Colors - Airline
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+"Elixir
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
+
+"Rust
+Plugin 'wting/rust.vim'
+Plugin 'jiangmiao/auto-pairs'
+
+"Clojure
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-classpath'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
-Plugin 'slashmili/alchemist.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+
+"JS
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'mxw/vim-jsx'
+
+"LESS
+Plugin 'groenewege/vim-less'
+
+"Markdown
+Plugin 'tpope/vim-markdown'
+Plugin 'junegunn/goyo.vim'
+
+"Git
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+
+"Editing
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'duggiefresh/vim-easydir'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'ervandew/supertab'
 call vundle#end()

@@ -44,6 +44,7 @@ Plugin 'junegunn/goyo.vim'
 "Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'cohama/agit.vim'
 
 "Editing
 Plugin 'ctrlpvim/ctrlp.vim'

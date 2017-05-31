@@ -131,3 +131,5 @@ noremap <Right> <Nop>
 
 "gitgutter
 set updatetime=250
+
+set mouse=a

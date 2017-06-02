@@ -33,6 +33,7 @@ Plugin 'guns/vim-clojure-highlight'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'
+Plugin 'kchmck/vim-coffee-script'
 
 "LESS
 Plugin 'groenewege/vim-less'

@@ -41,6 +41,9 @@ Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-markdown'
 Plugin 'junegunn/goyo.vim'
 
+"Jade
+Plugin 'digitaltoad/vim-pug.git'
+
 "Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'

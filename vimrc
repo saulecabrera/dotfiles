@@ -69,7 +69,7 @@ nnoremap <Leader>x :Explore<CR>
 vnoremap <LeftRelease> "*ygv
 
 if has('gui_running')
-  set macligatures
+  set macligatures "this will only work when using fonts w/ligatures i.e. Fira Code
   set guifont=DejaVu\ Sans\ Code:h13
   colorscheme gruvbox
   set guioptions-=R

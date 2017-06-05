@@ -54,6 +54,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'duggiefresh/vim-easydir'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'ervandew/supertab'
+
+"Linting
+Plugin 'w0rp/ale'
 call vundle#end()
 filetype plugin indent on
 

@@ -54,6 +54,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'duggiefresh/vim-easydir'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-commentary'
 
 "Linting
 Plugin 'w0rp/ale'

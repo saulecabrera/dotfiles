@@ -136,8 +136,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Monaco"
-                               :size 14
+   dotspacemacs-default-font '("Inconsolata for Powerline"
+                               :size 16
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -304,9 +304,11 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (spacemacs/load-theme 'gruvbox)
-  (setq powerline-default-separator 'utf-8)
-  (global-hl-line-mode -1)
   (push '("\\.js\\'" . react-mode) auto-mode-alist)
+  (global-hl-line-mode -1)
+  (setq
+   tab-always-indent nil
+   powerline-default-separator 'utf-8)
   (setq-default
    ;; js2-mode
    js2-basic-offset 2

@@ -43,6 +43,7 @@ values."
      auto-completion
      html
      javascript
+     react
      emacs-lisp
      erlang
      elixir

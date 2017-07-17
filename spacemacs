@@ -7,9 +7,6 @@
 You should not put any user code in this function besides modifying the variable
 values."
   (setq-default
-   ;; Indentation for JS files
-   js2-basic-offset 2
-   js-indent-level 2
    ;; Base distribution to use. This is a layer contained in the directory
    ;; `+distribution'. For now available distributions are `spacemacs-base'
    ;; or `spacemacs'. (default 'spacemacs)
@@ -85,6 +82,9 @@ values."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
+   ;; Indentation for JS files
+   js2-basic-offset 2
+   js-indent-level 2
    ;; If non nil ELPA repositories are contacted via HTTPS whenever it's
    ;; possible. Set it to nil if you have no way to use HTTPS in your
    ;; environment, otherwise it is strongly recommended to let it set to t.

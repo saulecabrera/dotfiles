@@ -82,9 +82,6 @@ values."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
-   ;; Indentation for JS files
-   js2-basic-offset 2
-   js-indent-level 2
    ;; If non nil ELPA repositories are contacted via HTTPS whenever it's
    ;; possible. Set it to nil if you have no way to use HTTPS in your
    ;; environment, otherwise it is strongly recommended to let it set to t.
@@ -309,6 +306,17 @@ you should place your code here."
   (spacemacs/load-theme 'gruvbox)
   (setq powerline-default-separator 'utf-8)
   (global-hl-line-mode -1)
+  (push '("\\.js\\'" . react-mode) auto-mode-alist)
+  (setq-default
+   ;; js2-mode
+   js2-basic-offset 2
+   js-indent-level 2
+   ;; web-mode
+   css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

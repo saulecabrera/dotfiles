@@ -304,7 +304,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-
+  (global-company-mode t)
   ;; Loading theme here to avoid
   ;; weird colors
   (spacemacs/load-theme 'brin)
@@ -346,4 +346,14 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(elixir-atom-face ((t (:foreground "#d3869b")))))
+ '(company-scrollbar-fg ((t (:background "#65737e"))))
+ '(company-template-field ((t (:background "#343d46" :foreground "black"))))
+ '(company-tooltip ((t (:background "#343d46" :foreground "#c0c5ce"))))
+ '(company-tooltip-annotation ((t (:foreground "#bf616a"))))
+ '(company-tooltip-common ((t (:foreground "#bf616a"))))
+ '(company-tooltip-selection ((t (:background "#2b303b"))))
+ '(elixir-atom-face ((t (:foreground "#d3869b"))))
+ '(helm-buffer-directory ((t (:foreground "#b48ead"))))
+ '(helm-ff-directory ((t (:foreground "#b48ead"))))
+ '(helm-selection ((t (:background "#343d46" :distant-foreground "black"))))
+ '(helm-source-header ((t (:background "" :foreground "white" :weight normal :height 1.1 :family "Fira Mono")))))

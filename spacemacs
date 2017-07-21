@@ -307,7 +307,7 @@ you should place your code here."
   (global-company-mode t)
   ;; Loading theme here to avoid
   ;; weird colors
-  (spacemacs/load-theme 'gotham)
+  (spacemacs/load-theme 'gruvbox)
   ;; Fix for react mode
   (push '("\\.js\\'" . react-mode) auto-mode-alist)
   ;; Disable current line highliting

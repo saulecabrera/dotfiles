@@ -39,4 +39,5 @@ endif
 let g:clang2_placeholder_next = ''
 let g:clang2_placeholder_prev = ''
 
-
+let g:spacevim_relativenumber = 0
+let mapleader = ","

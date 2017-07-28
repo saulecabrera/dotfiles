@@ -27,17 +27,34 @@ let g:spacevim_enable_os_fileformat_icon = 1
 let g:spacevim_buffer_index_type = 1
 let g:neomake_vim_enabled_makers = []
 if executable('vimlint')
-    call add(g:neomake_vim_enabled_makers, 'vimlint') 
+  call add(g:neomake_vim_enabled_makers, 'vimlint') 
 endif
 if executable('vint')
-    call add(g:neomake_vim_enabled_makers, 'vint') 
+  call add(g:neomake_vim_enabled_makers, 'vint') 
 endif
 if has('python3')
-    let g:ctrlp_map = ''
-    nnoremap <silent> <C-p> :Denite file_rec<CR>
+  let g:ctrlp_map = ''
+  nnoremap <silent> <C-p> :Denite file_rec<CR>
 endif
 let g:clang2_placeholder_next = ''
 let g:clang2_placeholder_prev = ''
 
 let g:spacevim_relativenumber = 0
 let mapleader = ","
+
+let g:spacevim_enable_neomake = 0
+
+let g:spacevim_custom_plugins = [
+  \ ['plasticboy/vim-markdown', {'on_ft' : 'markdown'}],
+  \ ['w0rp/ale'],
+  \ ]
+
+" indentation issues:
+" not sure if the configuration
+" provided by spacevim to deal
+" with this actually works
+set backspace=indent,eol,start
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2

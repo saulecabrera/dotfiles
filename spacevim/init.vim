@@ -48,6 +48,8 @@ let g:spacevim_custom_plugins = [
   \ ['plasticboy/vim-markdown', {'on_ft' : 'markdown'}],
   \ ]
 
+let g:neomake_javascript_enabled_makers = ['eslint']
+
 " indentation issues:
 " not sure if the configuration
 " provided by spacevim to deal

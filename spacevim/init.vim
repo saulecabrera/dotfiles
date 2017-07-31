@@ -42,11 +42,10 @@ let g:clang2_placeholder_prev = ''
 let g:spacevim_relativenumber = 0
 let mapleader = ","
 
-let g:spacevim_enable_neomake = 0
-
+let g:spacevim_disabled_plugins = [
+  \ ]
 let g:spacevim_custom_plugins = [
   \ ['plasticboy/vim-markdown', {'on_ft' : 'markdown'}],
-  \ ['w0rp/ale'],
   \ ]
 
 " indentation issues:

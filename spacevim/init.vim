@@ -48,6 +48,7 @@ let g:spacevim_custom_plugins = [
   \ ['plasticboy/vim-markdown', {'on_ft' : 'markdown'}],
   \ ['elzr/vim-json', {'on_ft' : 'json'}],
   \ ['digitaltoad/vim-pug', {'on_ft' : 'jade'}],
+  \ ['ElmCast/elm-vim', {'on_ft' : 'elm'}],
   \ ]
 
 let g:neomake_javascript_enabled_makers = ['eslint']

@@ -50,6 +50,8 @@ let g:spacevim_custom_plugins = [
   \ ['digitaltoad/vim-pug', {'on_ft' : 'jade'}],
   \ ['ElmCast/elm-vim', {'on_ft' : 'elm'}],
   \ ['mxw/vim-jsx'],
+  \ ['pangloss/vim-javascript'],
+  \ ['styled-components/vim-styled-components'],
   \ ]
 
 let g:neomake_javascript_enabled_makers = ['eslint']

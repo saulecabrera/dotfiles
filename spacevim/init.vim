@@ -49,9 +49,12 @@ let g:spacevim_custom_plugins = [
   \ ['elzr/vim-json', {'on_ft' : 'json'}],
   \ ['digitaltoad/vim-pug', {'on_ft' : 'jade'}],
   \ ['ElmCast/elm-vim', {'on_ft' : 'elm'}],
+  \ ['mxw/vim-jsx'],
   \ ]
 
 let g:neomake_javascript_enabled_makers = ['eslint']
+
+let g:jsx_ext_required = 0
 
 " indentation issues:
 " not sure if the configuration

@@ -25,7 +25,7 @@ let g:deoplete#auto_complete_delay = 150
 let g:spacevim_enable_tabline_filetype_icon = 1
 let g:spacevim_enable_os_fileformat_icon = 1
 let g:spacevim_buffer_index_type = 1
-let g:neomake_vim_enabled_makers = []
+let g:spacevim_enable_neomake = 1
 if executable('vimlint')
   call add(g:neomake_vim_enabled_makers, 'vimlint') 
 endif
@@ -52,13 +52,16 @@ let g:spacevim_custom_plugins = [
   \ ['mxw/vim-jsx'],
   \ ['pangloss/vim-javascript'],
   \ ['styled-components/vim-styled-components'],
+  \ ['jaawerth/nrun.vim'],
   \ ]
 
+"au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
+"au BufEnter *.jsx let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
+
+let g:neomake_verbose=3
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
-
 let g:jsx_ext_required = 0
-
 " indentation issues:
 " not sure if the configuration
 " provided by spacevim to deal

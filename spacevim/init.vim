@@ -61,6 +61,7 @@ let g:spacevim_custom_plugins = [
 let g:neomake_verbose=3
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
+let g:neomake_open_list = 0
 let g:jsx_ext_required = 0
 " indentation issues:
 " not sure if the configuration

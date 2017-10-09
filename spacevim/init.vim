@@ -53,6 +53,7 @@ let g:spacevim_custom_plugins = [
   \ ['pangloss/vim-javascript'],
   \ ['styled-components/vim-styled-components'],
   \ ['jaawerth/nrun.vim'],
+  \ ['Konfekt/FastFold'],
   \ ]
 
 "au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
@@ -63,6 +64,7 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
 let g:neomake_open_list = 0
 let g:jsx_ext_required = 0
+let g:indentLine_newVersion=0
 " indentation issues:
 " not sure if the configuration
 " provided by spacevim to deal
@@ -72,3 +74,6 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set foldmethod=syntax
+set showtabline=0
+set nocursorline

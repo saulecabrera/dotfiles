@@ -26,6 +26,7 @@ let g:spacevim_enable_tabline_filetype_icon = 1
 let g:spacevim_enable_os_fileformat_icon = 1
 let g:spacevim_buffer_index_type = 1
 let g:spacevim_enable_neomake = 1
+let g:spacevim_enable_cursorline = 0
 if executable('vimlint')
   call add(g:neomake_vim_enabled_makers, 'vimlint') 
 endif
@@ -75,5 +76,3 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set foldmethod=syntax
-set showtabline=0
-set nocursorline

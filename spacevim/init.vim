@@ -77,3 +77,8 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set foldmethod=syntax
+
+
+if has('gui_running')
+  set guifont=Hack:h15
+endif

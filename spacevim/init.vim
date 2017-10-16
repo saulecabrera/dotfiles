@@ -80,5 +80,5 @@ set foldmethod=syntax
 
 
 if has('gui_running')
-  set guifont=Hack:h15
+  set guifont=Hack:h14
 endif

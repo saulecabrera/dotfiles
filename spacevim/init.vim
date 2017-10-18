@@ -66,7 +66,7 @@ let g:neomake_jsx_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_exe = system('PATH=$(npm bin):$PATH && which eslint | tr -d "\n"')
 let g:neomake_open_list = 0
 let g:jsx_ext_required = 0
-let g:indentLine_faster=0
+let g:indentLine_faster = 1
 " indentation issues:
 " not sure if the configuration
 " provided by spacevim to deal

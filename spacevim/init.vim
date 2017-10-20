@@ -54,7 +54,6 @@ let g:spacevim_custom_plugins = [
   \ ['pangloss/vim-javascript'],
   \ ['styled-components/vim-styled-components'],
   \ ['jaawerth/nrun.vim'],
-  \ ['Konfekt/FastFold'],
   \ ]
 
 "au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
@@ -76,7 +75,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set foldmethod=syntax
+set foldmethod=indent
+set lazyredraw
+set ttyfast
 
 
 if has('gui_running')

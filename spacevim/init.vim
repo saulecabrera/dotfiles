@@ -25,7 +25,6 @@ let g:deoplete#auto_complete_delay = 150
 let g:spacevim_enable_tabline_filetype_icon = 1
 let g:spacevim_enable_os_fileformat_icon = 1
 let g:spacevim_buffer_index_type = 1
-let g:spacevim_enable_neomake = 1
 let g:spacevim_enable_cursorline = 0
 if executable('vimlint')
   call add(g:neomake_vim_enabled_makers, 'vimlint') 
@@ -43,6 +42,10 @@ let g:clang2_placeholder_prev = ''
 let g:spacevim_relativenumber = 0
 let mapleader = ","
 
+" Use ale instead of neomake
+let g:spacevim_enable_ale = 1
+let g:spacevim_enable_neomake = 0
+
 let g:spacevim_disabled_plugins = [
   \ ]
 let g:spacevim_custom_plugins = [
@@ -51,19 +54,19 @@ let g:spacevim_custom_plugins = [
   \ ['digitaltoad/vim-pug', {'on_ft' : 'jade'}],
   \ ['ElmCast/elm-vim', {'on_ft' : 'elm'}],
   \ ['mxw/vim-jsx'],
-  \ ['pangloss/vim-javascript'],
-  \ ['styled-components/vim-styled-components'],
+  \ ['styled-components/vim-styled-components', { 'rev': 'rewrite'}],
   \ ['jaawerth/nrun.vim'],
+  \ ['w0rp/ale']
   \ ]
 
 "au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 "au BufEnter *.jsx let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 
-let g:neomake_verbose=3
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_jsx_enabled_makers = ['eslint']
-let g:neomake_javascript_eslint_exe = system('PATH=$(npm bin):$PATH && which eslint | tr -d "\n"')
-let g:neomake_open_list = 0
+" let g:neomake_verbose=3
+" let g:neomake_javascript_enabled_makers = ['eslint']
+" let g:neomake_jsx_enabled_makers = ['eslint']
+" let g:neomake_javascript_eslint_exe = system('PATH=$(npm bin):$PATH && which eslint | tr -d "\n"')
+" let g:neomake_open_list = 0
 let g:jsx_ext_required = 0
 let g:indentLine_faster = 1
 " indentation issues:
@@ -75,11 +78,10 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set foldmethod=indent
 set lazyredraw
 set ttyfast
 
 
 if has('gui_running')
-  set guifont=Hack:h14
+  set guifont=Inconsolata\ for\ Powerline:h16
 endif

@@ -58,6 +58,9 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-commentary'
 
+" Window management
+Plugin 't9md/vim-choosewin'
+
 "Linting
 Plugin 'w0rp/ale'
 call vundle#end()
@@ -160,3 +163,5 @@ autocmd VimEnter *
                 \ |   NERDTree
                 \ |   wincmd w
                 \ | endif
+
+nmap - <Plug>(choosewin)

@@ -5,7 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'mhinz/vim-startify'
-Plugin 'scrooloose/nerdtree'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimfiler.vim'
 
 "Colors
 Plugin 'whatyouhide/vim-gotham'
@@ -153,15 +154,6 @@ let g:ale_lint_on_text_changed = 0
 " Startify options
 let g:startify_change_to_vcs_root = 1
 
-" Close nerd tree if it is the last buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Open nerd tree and startify at the same time
-autocmd VimEnter *
-                \   if !argc()
-                \ |   Startify
-                \ |   NERDTree
-                \ |   wincmd w
-                \ | endif
 
 nmap - <Plug>(choosewin)
+let g:vimfiler_as_default_explorer = 1

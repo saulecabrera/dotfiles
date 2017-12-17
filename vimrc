@@ -155,6 +155,21 @@ let g:ale_lint_on_text_changed = 0
 let g:startify_change_to_vcs_root = 1
 let g:startify_list_order = ['dir', 'files']
 
-
-nmap - <Plug>(choosewin)
+" VimFiler options
 let g:vimfiler_as_default_explorer = 1
+call vimfiler#custom#profile('default', 'context', {
+   \ 'safe' : 0,
+\ })
+
+autocmd VimEnter *
+                \   if !argc()
+                \ |   Startify
+                \ |   VimFilerExplorer
+                \ |   wincmd w
+                \ | endif
+
+autocmd BufEnter * if (!has('vim_starting') && winnr('$') == 1
+	\ && &filetype ==# 'vimfiler') | quit | endif
+
+"Choosewin options
+nmap - <Plug>(choosewin)

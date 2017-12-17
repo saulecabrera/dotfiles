@@ -153,6 +153,7 @@ let g:ale_lint_on_text_changed = 0
 
 " Startify options
 let g:startify_change_to_vcs_root = 1
+let g:startify_list_order = ['dir', 'files']
 
 
 nmap - <Plug>(choosewin)

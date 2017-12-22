@@ -69,11 +69,12 @@ filetype plugin indent on
 
 "mapping
 let mapleader = "\<Space>"
-nnoremap <Leader>o :CtrlP<CR>
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>o :CtrlPMixed<CR>
+nnoremap <Leader>s :w<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>x :Explore<CR>
+nmap     -<Plug>(choosewin)
 
 "workaround for nvim clipboard
 vnoremap <LeftRelease> "*ygv
@@ -171,5 +172,3 @@ autocmd VimEnter *
 autocmd BufEnter * if (!has('vim_starting') && winnr('$') == 1
 	\ && &filetype ==# 'vimfiler') | quit | endif
 
-"Choosewin options
-nmap - <Plug>(choosewin)

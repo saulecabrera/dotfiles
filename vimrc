@@ -74,7 +74,7 @@ nnoremap <Leader>s :w<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>x :Explore<CR>
-nmap     -<Plug>(choosewin)
+nmap - <Plug>(choosewin)
 
 "workaround for nvim clipboard
 vnoremap <LeftRelease> "*ygv

@@ -109,6 +109,8 @@ set softtabstop=2
 set ignorecase
 set smartcase
 set hlsearch
+set incsearch
+set clipboard=unnamed
 
 "airline configuration
 let g:airline#extensions#tabline#enabled = 0

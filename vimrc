@@ -54,10 +54,13 @@ Plugin 'cohama/agit.vim'
 
 "Editing
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'duggiefresh/vim-easydir'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-commentary'
+
+" Search
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'mhinz/vim-grepper'
 
 " Window management
 Plugin 't9md/vim-choosewin'
@@ -67,7 +70,7 @@ Plugin 'w0rp/ale'
 call vundle#end()
 filetype plugin indent on
 
-"mapping
+" MAPPINGS
 let mapleader = "\<Space>"
 nnoremap <Leader>o :CtrlPMixed<CR>
 nnoremap <Leader>s :w<CR>
@@ -75,6 +78,15 @@ nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>x :Explore<CR>
 nmap - <Plug>(choosewin)
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 "workaround for nvim clipboard
 vnoremap <LeftRelease> "*ygv
@@ -109,8 +121,10 @@ set softtabstop=2
 set ignorecase
 set smartcase
 set hlsearch
-set incsearch
 set clipboard=unnamed
+
+" incsearch
+let g:incsearch#auto_nohlsearch = 1
 
 "airline configuration
 let g:airline#extensions#tabline#enabled = 0

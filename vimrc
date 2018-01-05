@@ -57,6 +57,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-commentary'
+Plugin 'sickill/vim-pasta'
 
 " Search
 Plugin 'haya14busa/incsearch.vim'

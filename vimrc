@@ -52,6 +52,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'cohama/agit.vim'
 
+"Docker
+Plugin 'ekalinin/Dockerfile.vim'
+
 "Editing
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux-focus-events'

@@ -60,6 +60,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-commentary'
+Plugin 'sickill/vim-pasta'
 
 " Search
 Plugin 'haya14busa/incsearch.vim'
@@ -110,7 +111,7 @@ else
   endif
   colorscheme gruvbox
   let g:gruvbox_termcolors=256
-  let g:gruvbox_contrast_dark="medium"
+  let g:gruvbox_contrast_dark="soft"
 endif
 set background=dark
 set cursorline

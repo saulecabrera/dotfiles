@@ -55,9 +55,11 @@ Plugin 'cohama/agit.vim'
 "Editing
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-commentary'
 Plugin 'sickill/vim-pasta'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-completion-manager'
 
 " Search
 Plugin 'haya14busa/incsearch.vim'
@@ -79,6 +81,7 @@ nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>x :Explore<CR>
 nmap - <Plug>(choosewin)
+" search
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
@@ -88,6 +91,22 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+" completion
+set shortmess+=c
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Deoplete + Completion Framework
+call deoplete#enable()
+au User CmSetup call cm#register_source({'name' : 'deoplete',
+        \ 'priority': 7,  
+        \ 'abbreviation': '', 
+        \ })
+inoremap <silent> <Plug>_ <C-r>=g:Deoplete_ncm()<CR>
+func! g:Deoplete_ncm()
+  call cm#complete('deoplete', cm#context(), g:deoplete#_context.complete_position + 1, g:deoplete#_context.candidates)
+  return ''
+endfunc
 
 "workaround for nvim clipboard
 vnoremap <LeftRelease> "*ygv
@@ -108,7 +127,7 @@ else
   endif
   colorscheme gruvbox
   let g:gruvbox_termcolors=256
-  let g:gruvbox_contrast_dark="soft"
+  let g:gruvbox_contrast_dark="medium"
 endif
 set background=dark
 set cursorline
@@ -150,9 +169,6 @@ let g:instant_markdown_slow = 1
 "do not auto start plugin on opening a markdown buffer
 "start the plugin manually with :InstantMarkdownPreview
 let g:instant_markdown_autostart = 0
-
-"omnicompletion configuration
-set omnifunc=syntaxcomplete#Complete
 
 "disabling arrow keys
 noremap <Up> <Nop>

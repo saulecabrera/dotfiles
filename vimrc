@@ -128,11 +128,11 @@ else
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   endif
+    colorscheme gotham256
+    let g:airline_theme='gotham'
   " colorscheme gruvbox
-  colorscheme gotham256
-  let g:airline_theme='gotham'
-  let g:gruvbox_termcolors=256
-  let g:gruvbox_contrast_dark="medium"
+  " let g:gruvbox_termcolors=256
+  " let g:gruvbox_contrast_dark="medium"
 endif
 set background=dark
 set cursorline

@@ -128,8 +128,7 @@ else
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   endif
-    colorscheme gotham256
-    let g:airline_theme='gotham'
+    colorscheme gotham
   " colorscheme gruvbox
   " let g:gruvbox_termcolors=256
   " let g:gruvbox_contrast_dark="medium"
@@ -157,7 +156,7 @@ let g:airline_left_sep = '>'
 let g:airline_right_sep = '<'
 let g:airline_powerline_fonts = 0
 let g:airline_solarized_normal_green = 1
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'gotham'
 set laststatus=2 "for vim-airline to work
 
 "enable jsx in files with js extension

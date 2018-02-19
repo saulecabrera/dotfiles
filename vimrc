@@ -37,6 +37,14 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'
 
+"Elm
+" This depends on:
+" - elm
+" - elm-format: code formatting
+" - elm-oracle: code completion
+" npm install -g {{ pkg }}
+Plugin 'elmcast/elm-vim'
+
 "LESS
 Plugin 'groenewege/vim-less'
 

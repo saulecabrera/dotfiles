@@ -76,11 +76,10 @@ Plugin 'roxma/nvim-completion-manager'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'mhinz/vim-grepper'
 
-" Window management
-Plugin 't9md/vim-choosewin'
-
 "Linting
 Plugin 'w0rp/ale'
+
+
 call vundle#end()
 filetype plugin indent on
 
@@ -90,8 +89,8 @@ nnoremap <Leader>o :CtrlPMixed<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit<CR>
-nnoremap <Leader>x :Explore<CR>
-nmap - <Plug>(choosewin)
+nnoremap <Leader>x :<C-u>VimFiler -winwidth=35 -buffer-name=explorer -split -simple -toggle -no-quit<CR>
+
 " search
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
@@ -102,6 +101,7 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
 " completion
 set shortmess+=c
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -119,8 +119,6 @@ func! g:Deoplete_ncm()
   return ''
 endfunc
 
-"workaround for nvim clipboard
-vnoremap <LeftRelease> "*ygv
 
 if has('gui_running')
   set macligatures "this will only work when using fonts w/ligatures i.e. Fira Code
@@ -203,16 +201,15 @@ let g:startify_list_order = ['dir', 'files']
 
 " VimFiler options
 let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_file_icon = '-'
+autocmd FileType vimfiler nmap q <buffer> <Plug>(vimfiler_close)
+
+
 call vimfiler#custom#profile('default', 'context', {
    \ 'safe' : 0,
 \ })
 
-autocmd VimEnter *
-                \   if !argc()
-                \ |   Startify
-                \ |   VimFilerExplorer
-                \ |   wincmd w
-                \ | endif
+autocmd VimEnter * if !argc() | Startify | VimFilerExplorer | wincmd w | endif
 
 autocmd BufEnter * if (!has('vim_starting') && winnr('$') == 1
 	\ && &filetype ==# 'vimfiler') | quit | endif

@@ -191,6 +191,11 @@ set updatetime=250
 
 set mouse=a
 
+
+" fold method
+set foldmethod=indent
+set foldnestmax=2
+
 "lint only on file save, not continously
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0

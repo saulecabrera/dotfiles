@@ -6,7 +6,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'mhinz/vim-startify'
 Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/vimfiler.vim'
+Plugin 'tpope/vim-vinegar'
 
 "Colors
 Plugin 'whatyouhide/vim-gotham'
@@ -89,7 +89,6 @@ nnoremap <Leader>o :CtrlPMixed<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit<CR>
-nnoremap <Leader>x :<C-u>VimFiler -winwidth=35 -buffer-name=explorer -split -simple -toggle -no-quit<CR>
 
 " search
 map / <Plug>(incsearch-forward)
@@ -204,18 +203,6 @@ let g:ale_lint_on_text_changed = 0
 let g:startify_change_to_vcs_root = 1
 let g:startify_list_order = ['dir', 'files']
 
-" VimFiler options
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_file_icon = '-'
-autocmd FileType vimfiler nmap q <buffer> <Plug>(vimfiler_close)
 
-
-call vimfiler#custom#profile('default', 'context', {
-   \ 'safe' : 0,
-\ })
-
-autocmd VimEnter * if !argc() | Startify | VimFilerExplorer | wincmd w | endif
-
-autocmd BufEnter * if (!has('vim_starting') && winnr('$') == 1
-	\ && &filetype ==# 'vimfiler') | quit | endif
+autocmd VimEnter * if !argc() | Startify | wincmd w | endif
 

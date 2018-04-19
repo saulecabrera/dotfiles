@@ -28,6 +28,9 @@ alias zshconfig="vim ~/.zshrc"
 alias dot="vim $HOME/Developer/dotfiles"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zshr="source ~/.zshrc"
+alias current_br="git rev-parse --abbrev-ref HEAD"
+
+# Git aliases are added under $HOME/.gitconfig
 
 # Enable psql via Postgres App
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"

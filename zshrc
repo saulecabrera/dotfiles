@@ -41,3 +41,7 @@ source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 # Enable asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

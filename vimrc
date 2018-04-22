@@ -85,7 +85,7 @@ filetype plugin indent on
 
 " MAPPINGS
 let mapleader = "\<Space>"
-nnoremap <Leader>o :CtrlPMixed<CR>
+nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit<CR>

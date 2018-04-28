@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Saúl Cabrera
+	email = saulecabrera@gmail.com
+[credential]
+	helper = osxkeychain
+[core]
+	editor = nvim
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[alias]
+  ls = log --oneline
+  co = checkout
+  br = branch
+  s = status
+  d = diff

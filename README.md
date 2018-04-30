@@ -1,8 +1,7 @@
-## Usage
-```bash
-$ cd ~/path/to/a/dir
-$ git clone https://github.com/saulecabrera/dotfiles 
-$ ln -s ~/path/to/a/dir/dotfiles/vimrc ~/.vimrc
-$ vim +PluginInstall +qall
-```
-Before running the last step, make sure to have [Vundle](https://github.com/VundleVim/Vundle.vim) properly configured.
+# Saúl's dotfiles
+
+1. Clone.
+2. Make a symbolic link between the any of the files contained in this repo and it's equivalent config file. 
+    - `ln -s /your/dir/<dotfile> $HOME/.<dotfile>`
+3. Enjoy
+

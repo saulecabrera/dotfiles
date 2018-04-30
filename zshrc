@@ -20,13 +20,13 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Aliases
 alias vim="nvim"
-alias zshconfig="vim ~/.zshrc"
-alias dot="vim $HOME/Developer/dotfiles"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
+alias dot="nvim $HOME/Developer/dotfiles"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias zshr="source ~/.zshrc"
 alias current_br="git rev-parse --abbrev-ref HEAD"
 

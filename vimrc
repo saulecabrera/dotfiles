@@ -155,6 +155,9 @@ set clipboard=unnamed
 " incsearch
 let g:incsearch#auto_nohlsearch = 1
 
+" ctrl-p
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
+
 "airline configuration
 let g:airline#extensions#tabline#enabled = 0
 let g:airline_left_sep = '>'
@@ -166,11 +169,6 @@ set laststatus=2 "for vim-airline to work
 
 "enable jsx in files with js extension
 let g:jsx_ext_required = 0
-
-"enabling comments in italics
-let &t_ZH="\e[3m"
-let &t_ZR="\e[23m"
-"highlight Comment cterm=italic
 
 "vim-instant-markdown config
 "display changes on save

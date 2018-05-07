@@ -165,7 +165,7 @@ let g:airline_left_sep = '>'
 let g:airline_right_sep = '<'
 let g:airline_powerline_fonts = 0
 let g:airline_solarized_normal_green = 1
-let g:airline_theme = 'gotham'
+let g:airline_theme = 'nova'
 set laststatus=2 "for vim-airline to work
 
 "enable jsx in files with js extension

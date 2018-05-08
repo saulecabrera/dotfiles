@@ -72,6 +72,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'sickill/vim-pasta'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'roxma/nvim-completion-manager'
+Plugin 'tpope/vim-surround'
 
 " Search
 Plugin 'haya14busa/incsearch.vim'

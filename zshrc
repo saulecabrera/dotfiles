@@ -1,21 +1,13 @@
 export ZSH=$HOME/.oh-my-zsh
 
-# Theme Config
-ZSH_THEME="spaceship"
-
-SPACESHIP_ELIXIR_SHOW=false
-SPACESHIP_DOCKER_SHOW=false
-COMPLETION_WAITING_DOTS=true
-
-# Autojump config
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
 
 # Plugins
 plugins=(
   git
   zsh-autosuggestions
 )
+
+ZSH_THEME="robbyrussell"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,16 +24,14 @@ alias current_br="git rev-parse --abbrev-ref HEAD"
 
 # Git aliases are added under $HOME/.gitconfig
 
-# Enable psql via Postgres App
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
-
-# Souce spaceship theme dir
-source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
-
 # Enable asdf
+autoload -Uz compinit
+compinit
+
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

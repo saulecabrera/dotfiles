@@ -60,6 +60,7 @@ Plugin 'digitaltoad/vim-pug.git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'cohama/agit.vim'
+Plugin 'tpope/vim-rhubarb'
 
 "Docker
 Plugin 'ekalinin/Dockerfile.vim'

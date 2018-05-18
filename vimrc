@@ -23,6 +23,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 
+"Ruby
+Plugin 'vim-ruby/vim-ruby'
+
 "Rust
 Plugin 'wting/rust.vim'
 Plugin 'jiangmiao/auto-pairs'
@@ -38,6 +41,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'
 
+"TypeScript
+Plugin 'leafgarland/typescript-vim'
+
 "Elm
 " This depends on:
 " - elm
@@ -52,6 +58,7 @@ Plugin 'groenewege/vim-less'
 "Markdown
 Plugin 'tpope/vim-markdown'
 Plugin 'junegunn/goyo.vim'
+Plugin 'iamcco/markdown-preview.vim'
 
 "Jade
 Plugin 'digitaltoad/vim-pug.git'
@@ -173,12 +180,8 @@ set laststatus=2 "for vim-airline to work
 "enable jsx in files with js extension
 let g:jsx_ext_required = 0
 
-"vim-instant-markdown config
-"display changes on save
-let g:instant_markdown_slow = 1
-"do not auto start plugin on opening a markdown buffer
-"start the plugin manually with :InstantMarkdownPreview
-let g:instant_markdown_autostart = 0
+"Markdown preview
+let g:mkdp_refresh_slow = 1
 
 "disabling arrow keys
 noremap <Up> <Nop>

@@ -92,6 +92,7 @@ nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gr :Grepper<CR>
 
 " search
 map / <Plug>(incsearch-forward)
@@ -203,6 +204,11 @@ let g:ale_lint_on_text_changed = 0
 " Startify options
 let g:startify_change_to_vcs_root = 1
 let g:startify_list_order = ['dir', 'files']
+
+" Grepper cfg
+" brew install ripgrep
+runtime plugin/grepper.vim
+let g:grepper.tools = ['rg', 'grep']
 
 
 autocmd VimEnter * if !argc() | Startify | wincmd w | endif

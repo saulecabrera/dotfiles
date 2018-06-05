@@ -23,6 +23,12 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 
+"Erlang
+Plugin 'vim-erlang/vim-erlang-runtime.git'
+Plugin 'vim-erlang/vim-erlang-compiler.git'
+Plugin 'vim-erlang/vim-erlang-omnicomplete.git'
+Plugin 'vim-erlang/vim-erlang-tags.git'
+
 "Ruby
 Plugin 'vim-ruby/vim-ruby'
 

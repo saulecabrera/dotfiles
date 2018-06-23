@@ -212,7 +212,11 @@ let g:ale_lint_on_text_changed = 0
 
 " Startify options
 let g:startify_change_to_vcs_root = 1
-let g:startify_list_order = ['dir', 'files']
+let g:startify_lists = [
+        \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
+        \ { 'header': ['   MRU'],            'type': 'files' },
+        \ { 'header': ['   Sessions'],       'type': 'sessions' },
+\ ]
 
 " Grepper cfg
 " brew install ripgrep

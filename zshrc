@@ -28,6 +28,9 @@ alias current_br="git rev-parse --abbrev-ref HEAD"
 autoload -Uz compinit
 compinit
 
+export GOPATH=$HOME
+export PATH=$GOPATH/bin:$PATH
+
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 

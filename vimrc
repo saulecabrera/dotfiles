@@ -23,6 +23,12 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 
+"Erlang
+Plugin 'vim-erlang/vim-erlang-runtime.git'
+Plugin 'vim-erlang/vim-erlang-compiler.git'
+Plugin 'vim-erlang/vim-erlang-omnicomplete.git'
+Plugin 'vim-erlang/vim-erlang-tags.git'
+
 "Ruby
 Plugin 'vim-ruby/vim-ruby'
 
@@ -206,7 +212,11 @@ let g:ale_lint_on_text_changed = 0
 
 " Startify options
 let g:startify_change_to_vcs_root = 1
-let g:startify_list_order = ['dir', 'files']
+let g:startify_lists = [
+        \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
+        \ { 'header': ['   MRU'],            'type': 'files' },
+        \ { 'header': ['   Sessions'],       'type': 'sessions' },
+\ ]
 
 " Grepper cfg
 " brew install ripgrep

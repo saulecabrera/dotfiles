@@ -85,7 +85,6 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'tpope/vim-commentary'
 Plugin 'sickill/vim-pasta'
 Plugin 'Shougo/deoplete.nvim'
-Plugin 'roxma/nvim-completion-manager'
 Plugin 'tpope/vim-surround'
 
 " Search

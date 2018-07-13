@@ -28,8 +28,6 @@ alias current_br="git rev-parse --abbrev-ref HEAD"
 autoload -Uz compinit
 compinit
 
-export GOPATH=$HOME
-export PATH=$GOPATH/bin:$PATH
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
@@ -40,3 +38,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+
+export GOPATH=$HOME
+export PATH=$GOPATH/bin:$PATH
+

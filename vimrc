@@ -48,8 +48,7 @@ Plug 'mxw/vim-jsx'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 "TypeScript
-"npm i -g typescript
-Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.tsx'] }
+Plug 'leafgarland/typescript-vim', { 'do': 'npm install -g typescript', 'for': ['typescript', 'typescript.tsx'] }
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 "Elm
@@ -85,7 +84,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-commentary'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/denite.nvim'
 Plug 'tpope/vim-surround'
 
 " Search
@@ -124,11 +122,6 @@ set shortmess+=c
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" Deoplete + Completion Framework
-" python 3
-" pip3 install neovim
-" pip2 install --upgrade neovim
-let g:deoplete#enable_at_startup = 1 
 
 if has('gui_running')
   set macligatures "this will only work when using fonts w/ligatures i.e. Fira Code
@@ -211,11 +204,16 @@ let g:startify_lists = [
         \ { 'header': ['   Sessions'],       'type': 'sessions' },
 \ ]
 
+" Deoplete + Completion Framework
+" python 3
+" pip3 install neovim
+" pip3 install --upgrade neovim
+let g:deoplete#enable_at_startup = 1 
+
 " Grepper cfg
 " brew install ripgrep
 runtime plugin/grepper.vim
 let g:grepper.tools = ['rg', 'grep']
-
 
 autocmd VimEnter * if !argc() | Startify | wincmd w | endif
 

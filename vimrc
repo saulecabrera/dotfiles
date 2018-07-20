@@ -50,7 +50,6 @@ Plugin 'mxw/vim-jsx'
 
 "TypeScript
 Plugin 'leafgarland/typescript-vim'
-Plugin 'maxmellon/vim-jsx-pretty'
 
 "Elm
 " This depends on:
@@ -150,10 +149,9 @@ else
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   endif
-    colorscheme nord
-  " colorscheme gruvbox
-  " let g:gruvbox_termcolors=256
-  " let g:gruvbox_contrast_dark="medium"
+    colorscheme gruvbox
+    let g:gruvbox_termcolors=256
+    let g:gruvbox_contrast_dark="medium"
 endif
 set background=dark
 set cursorline
@@ -177,11 +175,11 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -
 
 "airline configuration
 let g:airline#extensions#tabline#enabled = 0
-let g:airline_left_sep = '>'
-let g:airline_right_sep = '<'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:airline_powerline_fonts = 0
 let g:airline_solarized_normal_green = 1
-let g:airline_theme = 'nova'
+let g:airline_theme = 'minimalist'
 set laststatus=2 "for vim-airline to work
 
 "enable jsx in files with js extension

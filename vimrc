@@ -48,7 +48,7 @@ Plug 'mxw/vim-jsx'
 
 "TypeScript
 "npm i -g typescript
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 "Elm

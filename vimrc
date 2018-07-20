@@ -1,55 +1,55 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'mhinz/vim-startify'
-Plugin 'Shougo/unite.vim'
-Plugin 'tpope/vim-vinegar'
+call plug#begin('~/.vim/plugged')
+Plug 'mhinz/vim-startify'
+Plug 'Shougo/unite.vim'
+Plug 'tpope/vim-vinegar'
 
 "Colors
-Plugin 'whatyouhide/vim-gotham'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'morhetz/gruvbox'
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'trevordmiller/nova-vim'
-Plugin 'arcticicestudio/nord-vim'
+Plug 'whatyouhide/vim-gotham'
+Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'trevordmiller/nova-vim'
+Plug 'arcticicestudio/nord-vim'
 
 "Colors - Airline
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 "Elixir
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'slashmili/alchemist.vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'slashmili/alchemist.vim'
 
 "Erlang
-Plugin 'vim-erlang/vim-erlang-runtime.git'
-Plugin 'vim-erlang/vim-erlang-compiler.git'
-Plugin 'vim-erlang/vim-erlang-omnicomplete.git'
-Plugin 'vim-erlang/vim-erlang-tags.git'
+Plug 'vim-erlang/vim-erlang-runtime.git'
+Plug 'vim-erlang/vim-erlang-compiler.git'
+Plug 'vim-erlang/vim-erlang-omnicomplete.git'
+Plug 'vim-erlang/vim-erlang-tags.git'
 
 "Ruby
-Plugin 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby'
 
 "Rust
-Plugin 'wting/rust.vim'
-Plugin 'jiangmiao/auto-pairs'
+Plug 'wting/rust.vim'
+Plug 'jiangmiao/auto-pairs'
 
 "Clojure
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-classpath'
-Plugin 'guns/vim-clojure-static'
-Plugin 'guns/vim-clojure-highlight'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-classpath'
+Plug 'guns/vim-clojure-static'
+Plug 'guns/vim-clojure-highlight'
 
 "JS
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mxw/vim-jsx'
 
 "TypeScript
-Plugin 'leafgarland/typescript-vim'
+"npm i -g typescript
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 "Elm
 " This depends on:
@@ -57,45 +57,46 @@ Plugin 'leafgarland/typescript-vim'
 " - elm-format: code formatting
 " - elm-oracle: code completion
 " npm install -g {{ pkg }}
-Plugin 'elmcast/elm-vim'
+Plug 'elmcast/elm-vim'
 
 "LESS
-Plugin 'groenewege/vim-less'
+Plug 'groenewege/vim-less'
 
 "Markdown
-Plugin 'tpope/vim-markdown'
-Plugin 'junegunn/goyo.vim'
-Plugin 'iamcco/markdown-preview.vim'
+Plug 'tpope/vim-markdown'
+Plug 'junegunn/goyo.vim'
+Plug 'iamcco/markdown-preview.vim'
 
 "Jade
-Plugin 'digitaltoad/vim-pug.git'
+Plug 'digitaltoad/vim-pug.git'
 
 "Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'cohama/agit.vim'
-Plugin 'tpope/vim-rhubarb'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'cohama/agit.vim'
+Plug 'tpope/vim-rhubarb'
 
 "Docker
-Plugin 'ekalinin/Dockerfile.vim'
+Plug 'ekalinin/Dockerfile.vim'
 
 "Editing
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tmux-plugins/vim-tmux-focus-events'
-"Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-commentary'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'tpope/vim-surround'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tpope/vim-commentary'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/denite.nvim'
+Plug 'tpope/vim-surround'
 
 " Search
-Plugin 'haya14busa/incsearch.vim'
-Plugin 'mhinz/vim-grepper'
+Plug 'haya14busa/incsearch.vim'
+Plug 'mhinz/vim-grepper'
 
 "Linting
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
+
+call plug#end()
 
 
-call vundle#end()
 filetype plugin indent on
 
 " MAPPINGS
@@ -123,17 +124,10 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Deoplete + Completion Framework
-call deoplete#enable()
-au User CmSetup call cm#register_source({'name' : 'deoplete',
-        \ 'priority': 7,  
-        \ 'abbreviation': '', 
-        \ })
-inoremap <silent> <Plug>_ <C-r>=g:Deoplete_ncm()<CR>
-func! g:Deoplete_ncm()
-  call cm#complete('deoplete', cm#context(), g:deoplete#_context.complete_position + 1, g:deoplete#_context.candidates)
-  return ''
-endfunc
-
+" python 3
+" pip3 install neovim
+" pip2 install --upgrade neovim
+let g:deoplete#enable_at_startup = 1 
 
 if has('gui_running')
   set macligatures "this will only work when using fonts w/ligatures i.e. Fira Code

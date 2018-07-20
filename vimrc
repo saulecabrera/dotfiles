@@ -50,6 +50,7 @@ Plugin 'mxw/vim-jsx'
 
 "TypeScript
 Plugin 'leafgarland/typescript-vim'
+Plugin 'maxmellon/vim-jsx-pretty'
 
 "Elm
 " This depends on:

@@ -29,27 +29,27 @@ Plug 'vim-erlang/vim-erlang-omnicomplete.git'
 Plug 'vim-erlang/vim-erlang-tags.git'
 
 "Ruby
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 "Rust
 Plug 'wting/rust.vim'
 Plug 'jiangmiao/auto-pairs'
 
 "Clojure
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-classpath'
-Plug 'guns/vim-clojure-static'
-Plug 'guns/vim-clojure-highlight'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-classpath', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 
 "JS
-Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
 Plug 'mxw/vim-jsx'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 "TypeScript
 "npm i -g typescript
-Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.tsx'] }
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 "Elm
@@ -58,7 +58,7 @@ Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 " - elm-format: code formatting
 " - elm-oracle: code completion
 " npm install -g {{ pkg }}
-Plug 'elmcast/elm-vim'
+Plug 'elmcast/elm-vim', { 'for': 'elm' }
 
 "LESS
 Plug 'groenewege/vim-less'

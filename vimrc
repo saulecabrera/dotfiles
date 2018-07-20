@@ -45,6 +45,7 @@ Plug 'guns/vim-clojure-highlight'
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mxw/vim-jsx'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 "TypeScript
 "npm i -g typescript

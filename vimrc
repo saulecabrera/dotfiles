@@ -45,10 +45,10 @@ Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
 Plug 'mxw/vim-jsx'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm i -g tern' }
 
 "TypeScript
-Plug 'leafgarland/typescript-vim', { 'do': 'npm install -g typescript', 'for': ['typescript', 'typescript.tsx'] }
+Plug 'leafgarland/typescript-vim', { 'do': 'npm i -g typescript', 'for': ['typescript', 'typescript.tsx'] }
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 "Elm

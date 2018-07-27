@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+export EDITOR='nvim'
+export NVM_DIR=$HOME/.nvm
+export GOPATH=$HOME
+export PATH=$GOPATH/bin:$PATH
+
+
+# vim: set ft=sh

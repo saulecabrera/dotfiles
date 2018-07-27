@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+
+function mkd() {
+  mkdir "$@" && cd "$@";
+}
+
+# vim: set ft=sh

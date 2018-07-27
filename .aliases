@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+alias vim="nvim"
+alias dot="cd $HOME/Developer/dotfiles"
+alias dotv="nvim $HOME/Developer/dotfiles"
+alias zshr="source ~/.zshrc"
+alias git-current-branch="git rev-parse --abbrev-ref HEAD"
+
+# vim: set ft=sh

@@ -5,4 +5,11 @@ function mkd() {
   mkdir "$@" && cd "$@";
 }
 
+# Go Developer
+# Go to any subdirectory under the
+# Developer dir
+function god() {
+  cd "$HOME/Developer/$@" 
+}
+
 # vim: set ft=sh

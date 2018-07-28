@@ -12,8 +12,12 @@
 	smudge = git-lfs smudge %f
 	required = true
 [alias]
-  ls = log --oneline
+  l  = log --pretty=oneline -n 20 --graph --abbrev-commit
+  s  = status
+  d  = diff
   co = checkout
   br = branch
-  s = status
-  d = diff
+  contributors = shortlog --summary --numbered
+  aliases = config --get-regexp alias
+  branches = branch -a
+  remotes = remote -v

@@ -21,5 +21,3 @@ printf "\n===> Syncing new files to your home directory...\n";
 
 rsync --exclude ".git/" --exclude "README.md" --exclude ".gitignore" --exclude "bootstrap.sh" --exclude ".DS_Store" \
   -avh --no-perms . ~;
-
-zsh;

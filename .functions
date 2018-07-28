@@ -6,8 +6,7 @@ function mkd() {
 }
 
 # Go Developer
-# Go to any subdirectory under the
-# Developer dir
+# Go to any subdirectory under $HOME/Developer
 function god() {
   cd "$HOME/Developer/$@" 
 }

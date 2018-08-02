@@ -191,6 +191,9 @@ set updatetime=250
 
 set mouse=a
 
+set splitbelow
+set splitright
+
 
 " fold method
 set foldmethod=indent

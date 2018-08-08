@@ -167,11 +167,12 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -
 
 "airline configuration
 let g:airline#extensions#tabline#enabled = 0
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+let g:airline_left_sep = ' '
+let g:airline_right_sep = ' '
+let g:airline_inactive_collapse = 1
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_normal_green = 1
-let g:airline_theme = 'minimalist'
+let g:airline_theme = 'distinguished'
 set laststatus=2 "for vim-airline to work
 
 "enable jsx in files with js extension

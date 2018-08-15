@@ -185,6 +185,10 @@ let g:jsx_ext_required = 0
 "Markdown preview
 let g:mkdp_refresh_slow = 1
 
+"netrw
+let g:netrw_banner = 1
+let g:netrw_preview = 1
+
 "disabling arrow keys
 noremap <Up> <Nop>
 noremap <Down> <Nop>

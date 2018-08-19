@@ -173,6 +173,9 @@ let g:airline_solarized_normal_green = 1
 let g:airline_theme = 'distinguished'
 set laststatus=2 "for vim-airline to work
 
+" Prevent mix recompile with ale
+let $MIX_ENV = 'test'
+
 "enable jsx in files with js extension
 let g:jsx_ext_required = 0
 

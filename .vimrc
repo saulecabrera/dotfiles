@@ -19,14 +19,8 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 "Elixir
-Plug 'elixir-lang/vim-elixir'
-Plug 'slashmili/alchemist.vim'
-
-"Erlang
-Plug 'vim-erlang/vim-erlang-runtime.git'
-Plug 'vim-erlang/vim-erlang-compiler.git'
-Plug 'vim-erlang/vim-erlang-omnicomplete.git'
-Plug 'vim-erlang/vim-erlang-tags.git'
+Plug 'elixir-lang/vim-elixir' , { 'for': 'elixir' }
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 "Ruby
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
@@ -68,7 +62,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'iamcco/markdown-preview.vim'
 
 "Jade
-Plug 'digitaltoad/vim-pug.git'
+Plug 'digitaltoad/vim-pug'
 
 "Git
 Plug 'tpope/vim-fugitive'

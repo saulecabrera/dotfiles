@@ -138,11 +138,11 @@ else
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   endif
-    colorscheme gruvbox
-    let g:gruvbox_termcolors=256
-    let g:gruvbox_contrast_dark="medium"
+  colorscheme gruvbox
+  let g:gruvbox_termcolors=256
+  let g:gruvbox_contrast_light="soft"
 endif
-set background=dark
+set background=light
 set cursorline
 set number
 syntax on
@@ -170,7 +170,7 @@ let g:airline_right_sep = ' '
 let g:airline_inactive_collapse = 1
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_normal_green = 1
-let g:airline_theme = 'distinguished'
+let g:airline_theme = 'gruvbox'
 set laststatus=2 "for vim-airline to work
 
 " Prevent mix recompile with ale

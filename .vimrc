@@ -142,7 +142,7 @@ else
   let g:gruvbox_termcolors=256
   let g:gruvbox_contrast_light="medium"
 endif
-set background=light
+set background=dark
 set cursorline
 set number
 syntax on

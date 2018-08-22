@@ -140,7 +140,7 @@ else
   endif
   colorscheme gruvbox
   let g:gruvbox_termcolors=256
-  let g:gruvbox_contrast_light="soft"
+  let g:gruvbox_contrast_light="medium"
 endif
 set background=light
 set cursorline
@@ -156,6 +156,7 @@ set smartcase
 set hlsearch
 set clipboard=unnamed
 set encoding=utf-8
+set lazyredraw
 
 " incsearch
 let g:incsearch#auto_nohlsearch = 1

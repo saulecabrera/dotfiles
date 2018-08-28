@@ -5,4 +5,7 @@
     "editor.minimap.enabled": false,
     "workbench.iconTheme": "material-icon-theme",
     "editor.tabSize": 2,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
 }

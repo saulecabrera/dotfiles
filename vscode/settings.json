@@ -8,4 +8,7 @@
     "vim.incsearch": true,
     "vim.hlsearch": true,
     "vim.leader": "<space>",
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "same",
+    "gitlens.currentLine.scrollable": false
 }

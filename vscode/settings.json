@@ -10,5 +10,8 @@
     "vim.leader": "<space>",
     "editor.wordWrap": "on",
     "editor.wrappingIndent": "same",
-    "gitlens.currentLine.scrollable": false
+    "gitlens.currentLine.scrollable": false,
+    "workbench.editor.showTabs": false,
+    "workbench.editor.enablePreview": false,
+    "explorer.openEditors.visible": 0
 }

@@ -13,5 +13,6 @@
     "gitlens.currentLine.scrollable": false,
     "workbench.editor.showTabs": false,
     "workbench.editor.enablePreview": false,
-    "explorer.openEditors.visible": 0
+    "explorer.openEditors.visible": 0,
+    "explorer.confirmDelete": false
 }

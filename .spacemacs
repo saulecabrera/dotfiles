@@ -38,7 +38,7 @@ This function should only modify configuration layer settings."
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
+     ;; ---------------------------- ------------------------------------
      helm
      html
      javascript
@@ -195,7 +195,7 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(solarized-dark)
+   dotspacemacs-themes '(solarized-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -465,6 +465,7 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (setq neo-theme 'arrow)
   (setq multi-term-program "/bin/zsh")
+  (setq web-mode-code-indent-offset 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

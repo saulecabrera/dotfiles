@@ -466,6 +466,8 @@ before packages are loaded."
   (setq neo-theme 'arrow)
   (setq multi-term-program "/bin/zsh")
   (setq web-mode-code-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq js-indent-level 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

@@ -469,6 +469,7 @@ before packages are loaded."
   (setq web-mode-css-indent-offset 2)
   (setq js-indent-level 2)
   (setq-default typescript-indent-level 2)
+  (setq solarized-use-more-italic nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

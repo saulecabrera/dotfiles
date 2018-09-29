@@ -42,7 +42,9 @@ This function should only modify configuration layer settings."
      helm
      html
      javascript
-     typescript
+     ;; npm i -g typescript typescript-language-server
+     (typescript :variables
+                 typescript-backend 'lsp)
      react
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
@@ -63,6 +65,7 @@ This function should only modify configuration layer settings."
             shell-default-position 'right)
      syntax-checking
      yaml
+     lsp
      )
 
    ;; List of additional packages that will be installed without being
@@ -467,10 +470,13 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (setq neo-theme 'arrow)
   (setq multi-term-program "/bin/zsh")
+
+  (setq-default js2-basic-offset 2)
   (setq web-mode-code-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
   (setq js-indent-level 2)
   (setq-default typescript-indent-level 2)
+
   (doom-themes-visual-bell-config)
   (doom-themes-neotree-config)
   (doom-themes-treemacs-config)

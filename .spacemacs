@@ -43,8 +43,7 @@ This function should only modify configuration layer settings."
      html
      javascript
      ;; npm i -g typescript typescript-language-server
-     (typescript :variables
-                 typescript-backend 'lsp)
+     typescript
      react
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete

@@ -42,7 +42,6 @@ This function should only modify configuration layer settings."
      helm
      html
      javascript
-     ;; npm i -g typescript typescript-language-server
      typescript
      react
      (auto-completion :variables
@@ -65,6 +64,8 @@ This function should only modify configuration layer settings."
      syntax-checking
      yaml
      lsp
+     ruby
+     ruby-on-rails
      )
 
    ;; List of additional packages that will be installed without being
@@ -472,6 +473,7 @@ before packages are loaded."
   (setq-default js2-basic-offset 2)
   (setq web-mode-code-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
+  (setq web-mode-markup-indent-offset 2)
   (setq js-indent-level 2)
   (setq-default typescript-indent-level 2)
 

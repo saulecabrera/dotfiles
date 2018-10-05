@@ -482,6 +482,7 @@ before packages are loaded."
   (doom-themes-org-config)
 
   (setq neo-theme 'arrow)
+  (setq projectile-enable-caching t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

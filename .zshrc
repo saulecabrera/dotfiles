@@ -1,6 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
 
-
 # ---------- ZSH -----------
 plugins=(
   git

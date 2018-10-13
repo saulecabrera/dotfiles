@@ -39,7 +39,10 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ---------------------------- ------------------------------------
-     helm
+     ;; brew intsall rg
+     (helm
+      :variables helm-no-header t
+      )
      html
      javascript
      typescript
@@ -63,7 +66,6 @@ This function should only modify configuration layer settings."
             shell-default-position 'right)
      syntax-checking
      yaml
-     lsp
      ruby
      ruby-on-rails
      )

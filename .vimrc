@@ -124,25 +124,18 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
+colorscheme solarized
 if has('gui_running')
   set macligatures "this will only work when using fonts w/ligatures i.e. Fira Code
-  set guifont=DejaVu\ Sans\ Code:h13
-  colorscheme gruvbox
+  set guifont=Hack:h13
   set guioptions-=R
   set guioptions-=r
   set guioptions-=L
   set guioptions-=l
 else
-  if $TERM_PROGRAM =~ "iTerm"
-    set termguicolors
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  endif
-  colorscheme gruvbox
-  let g:gruvbox_termcolors=256
-  let g:gruvbox_contrast_light="medium"
+  let g:solarized_termcolors=16
 endif
-set background=dark
+set background=light
 set cursorline
 set number
 syntax on
@@ -171,7 +164,7 @@ let g:airline_right_sep = ' '
 let g:airline_inactive_collapse = 1
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_normal_green = 1
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'solarized'
 set laststatus=2 "for vim-airline to work
 
 " Prevent mix recompile with ale

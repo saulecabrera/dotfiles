@@ -483,6 +483,8 @@ before packages are loaded."
 
   (setq neo-theme 'arrow)
   (setq projectile-enable-caching t)
+
+  (setenv "MIX_ENV" "test")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

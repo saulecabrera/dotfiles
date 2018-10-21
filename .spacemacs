@@ -40,9 +40,7 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ---------------------------- ------------------------------------
      ;; brew intsall rg
-     (helm
-      :variables helm-no-header t
-      )
+     ivy
      html
      javascript
      typescript

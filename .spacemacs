@@ -41,6 +41,7 @@ This function should only modify configuration layer settings."
      ;; ---------------------------- ------------------------------------
      ;; brew intsall rg
      ivy
+     org
      html
      javascript
      typescript

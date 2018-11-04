@@ -82,16 +82,16 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: Monaco
+    family: Input
     style: Regular
 
   # Italic font face
   bold:
-    family: Monaco
+    family: Input
 
   # Italic font face
   italic:
-    family: Monaco
+    family: Input
 
   # Point size
   size: 13.0

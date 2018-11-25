@@ -5,7 +5,7 @@ plugins=(
   git
 )
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="sunrise"
 source $ZSH/oh-my-zsh.sh
 
 # --------------------------

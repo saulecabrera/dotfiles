@@ -3,6 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 # ---------- ZSH -----------
 plugins=(
   git
+  vi-mode
 )
 
 ZSH_THEME="sunrise"

@@ -135,7 +135,7 @@ if has('gui_running')
 else
   let g:solarized_termcolors=16
 endif
-set background=light
+set background=dark
 set cursorline
 set number
 syntax on

@@ -130,13 +130,12 @@ custom_cursor_colors: false
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-
-# Colors (Solarized Light)
+# Colors (Solarized Dark)
 colors:
   # Default colors
   primary:
-    background: '0xfdf6e3'
-    foreground: '0x586e75'
+    background: '0x002b36'
+    foreground: '0x839496'
 
   # Normal colors
   normal:
@@ -159,6 +158,7 @@ colors:
     magenta: '0x6c71c4'
     cyan:    '0x93a1a1'
     white:   '0xfdf6e3'
+
   #
   # The indexed colors include all colors from 16 to 256.
   # When these are not set, they're filled with sensible defaults.

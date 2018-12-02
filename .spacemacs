@@ -478,6 +478,8 @@ before packages are loaded."
   (setq js-indent-level 2)
   (setq-default typescript-indent-level 2)
 
+  (setq git-gutter-fr+-side 'left-fringe)
+
   (doom-themes-visual-bell-config)
   (doom-themes-treemacs-config)
   (doom-themes-org-config)

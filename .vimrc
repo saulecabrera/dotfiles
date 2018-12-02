@@ -124,7 +124,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
-colorscheme solarized
+colorscheme nord
 if has('gui_running')
   set macligatures "this will only work when using fonts w/ligatures i.e. Fira Code
   set guifont=Hack:h13

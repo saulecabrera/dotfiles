@@ -60,8 +60,7 @@ This function should only modify configuration layer settings."
      neotree
      docker
      (shell :variables
-            shell-default-shell 'multi-term
-            shell-default-height 30
+            shell-default-shell 'eshell
             shell-default-position 'right)
      syntax-checking
      yaml

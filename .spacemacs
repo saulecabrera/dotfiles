@@ -453,7 +453,8 @@ It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq doom-themes-enable-bold nil
         doom-themes-enable-italic nil)
-    )
+  (setq-default git-magit-status-fullscreen t)
+  )
 
 (defun dotspacemacs/user-load ()
   "Library to load while dumping.

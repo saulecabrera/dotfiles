@@ -468,7 +468,6 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (setq multi-term-program "/bin/zsh")
 
   (setq-default js2-basic-offset 2)
   (setq web-mode-code-indent-offset 2)
@@ -490,6 +489,8 @@ before packages are loaded."
 
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize))
+
+  (add-hook 'dired-mode-hook 'custom/dired)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -521,3 +522,7 @@ This function is called at the very end of Spacemacs initialization."
   )
  )
 )
+
+
+(defun custom/dired ()
+  (dired-hide-details-mode 1))

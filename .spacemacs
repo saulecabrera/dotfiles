@@ -453,7 +453,6 @@ It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq doom-themes-enable-bold nil
         doom-themes-enable-italic nil)
-  (setq-default git-magit-status-fullscreen t)
   )
 
 (defun dotspacemacs/user-load ()
@@ -470,12 +469,9 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  (setq-default js2-basic-offset 2)
-  (setq web-mode-code-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  (setq web-mode-markup-indent-offset 2)
-  (setq js-indent-level 2)
-  (setq-default typescript-indent-level 2)
+  (custom/web)
+  (custom/magit)
+  (add-hook 'dired-mode-hook 'custom/dired)
 
   (setq git-gutter-fr+-side 'left-fringe)
 
@@ -484,15 +480,13 @@ before packages are loaded."
   (doom-themes-org-config)
 
   (setq neo-theme 'arrow)
+
   (setq projectile-enable-caching t)
 
   (setenv "MIX_ENV" "test")
 
   (when (memq window-system '(mac ns x))
-    (exec-path-from-shell-initialize))
-
-  (add-hook 'dired-mode-hook 'custom/dired)
-  )
+    (exec-path-from-shell-initialize)))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -527,3 +521,18 @@ This function is called at the very end of Spacemacs initialization."
 
 (defun custom/dired ()
   (dired-hide-details-mode 1))
+
+(defun custom/magit ()
+  (remove-hook 'server-switch-hook 'magit-commit-diff)
+  (setq-default git-magit-status-fullscreen t))
+
+(defun custom/web ()
+  (setq-default js2-basic-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-markup-indent-offset 2)
+  (setq js-indent-level 2)
+  (setq-default typescript-indent-level 2))
+
+(defun dotfiles/bootstrap ()
+  (shell-command-to-string "./bootstrap.sh"))

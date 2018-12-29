@@ -50,6 +50,7 @@ This function should only modify configuration layer settings."
                       auto-completion-return-key-behavior 'complete
                       auto-complete-enable-sort-by-usage t)
      elixir
+     (elm :variables elm-sort-imports-on-save t)
      erlang
      emacs-lisp
      git

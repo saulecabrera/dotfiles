@@ -82,19 +82,19 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-    family: Courier Prime Code
+    family: Input
     style: Regular
 
   # Italic font face
   bold:
-    family: Courier Prime Code
+    family: Input
 
   # Italic font face
   italic:
-    family: Courier Prime Code
+    family: Input
 
   # Point size
-  size: 15
+  size: 14
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.

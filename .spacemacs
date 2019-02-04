@@ -63,6 +63,7 @@ This function should only modify configuration layer settings."
      (shell :variables
             shell-default-shell 'eshell
             shell-default-position 'right)
+     shell-scripts
      syntax-checking
      yaml
      ruby

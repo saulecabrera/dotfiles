@@ -50,12 +50,8 @@ set -xg PATH $GOPATH/bin:$PATH
 # dev -----------------------------
 source /opt/dev/dev.fish
 
-# asdf ----------------------------
-autoload -Uz compinit
-compinit
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
-# nvm -----------------------------
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Other plugins (putting them here in the meantime)
+# Theme: l
+# asdf
+# z
+# nvm

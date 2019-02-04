@@ -1,6 +1,6 @@
 fish_vi_key_bindings
 
-# Nord theme
+# Nord theme -----------------------
 set nord0 2e3440
 set nord1 3b4252
 set nord2 434c5e
@@ -41,11 +41,21 @@ set fish_pager_color_description $nord10
 set fish_pager_color_progress $nord12
 set fish_pager_color_secondary $nord1
 
-
+# PATHS ---------------------------
 set -xg GOPATH $HOME
 set -xg EDITOR nvim
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin:$PATH
 
+# dev -----------------------------
 source /opt/dev/dev.fish
 
+# asdf ----------------------------
+autoload -Uz compinit
+compinit
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+# nvm -----------------------------
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

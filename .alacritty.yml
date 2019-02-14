@@ -81,20 +81,13 @@ tabspaces: 8
 # Font configuration (changes require restart)
 font:
   # Normal (roman) font face
+  # Needs to be ttf, crashes otherwise
   normal:
-    family: Consolas
+    family: Inconsolata
     style: Regular
 
-  # Italic font face
-  bold:
-    family: Consolas
-
-  # Italic font face
-  italic:
-    family: Consolas
-
   # Point size
-  size: 15
+  size: 16
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -111,7 +104,7 @@ font:
 
   # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
   # screens and make reading text a little easier.
-  scale_with_dpi: true
+  # scale_with_dpi: true
 
   # Thin stroke font rendering (OS X only)
   #
@@ -121,11 +114,6 @@ font:
 
 # Display the time it takes to redraw each frame.
 render_timer: false
-
-# Use custom cursor colors. If `true`, the `colors.cursor.foreground` and
-# `colors.cursor.background` colors will be used to display the cursor.
-# Otherwise the cell colors are inverted for the cursor.
-custom_cursor_colors: false
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
@@ -221,6 +209,7 @@ mouse:
   # or triple click.
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
+  hide_when_typing: false
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
@@ -230,7 +219,6 @@ selection:
 
 dynamic_title: true
 
-hide_cursor_when_typing: false
 
 # Cursor style
 #
@@ -238,11 +226,9 @@ hide_cursor_when_typing: false
 #   - Block
 #   - Underline
 #   - Beam
-cursor_style: Block
-
-# If this is `true`, the cursor will be rendered as a hollow box when the
-# window is not focused.
-unfocused_hollow_cursor: true
+cursor:
+  style: Block
+  unfocused_hollow: true
 
 # Live config reload (changes require restart)
 live_config_reload: true

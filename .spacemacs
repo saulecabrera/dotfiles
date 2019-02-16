@@ -487,6 +487,8 @@ before packages are loaded."
 
   (setenv "MIX_ENV" "test")
 
+  (golden-ratio-mode 1)
+
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize)))
 

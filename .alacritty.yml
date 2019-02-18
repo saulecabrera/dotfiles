@@ -83,7 +83,7 @@ font:
   # Normal (roman) font face
   # Needs to be ttf, crashes otherwise
   normal:
-    family: Source Code Pro
+    family: Consolas
     style: Regular
 
   # Point size

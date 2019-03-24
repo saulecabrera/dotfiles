@@ -67,9 +67,7 @@ This function should only modify configuration layer settings."
      shell-scripts
      syntax-checking
      yaml
-     (ruby :variables
-           ruby-enable-enh-ruby-mode t
-           ruby-version-manager 'chruby)
+     ruby
      ruby-on-rails
      osx
      )

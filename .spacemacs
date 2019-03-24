@@ -49,6 +49,7 @@ This function should only modify configuration layer settings."
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-complete-enable-sort-by-usage t)
+     lsp
      elixir
      (elm :variables elm-sort-imports-on-save t)
      erlang
@@ -84,7 +85,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(alchemist)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -491,7 +492,9 @@ before packages are loaded."
   (golden-ratio-mode 1)
 
   (when (memq window-system '(mac ns x))
-    (exec-path-from-shell-initialize)))
+    (exec-path-from-shell-initialize))
+
+  (custom/lsp-elixir))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -538,6 +541,16 @@ This function is called at the very end of Spacemacs initialization."
   (setq web-mode-markup-indent-offset 2)
   (setq js-indent-level 2)
   (setq-default typescript-indent-level 2))
+
+(defun custom/lsp-elixir ()
+  (use-package lsp-mode
+    :commands lsp
+    :ensure t
+    :diminish lsp-mode
+    :hook
+    (elixir-mode . lsp)
+    :init
+    (add-to-list 'exec-path "~/Developer/elixir-ls/release/")))
 
 (defun dotfiles/bootstrap ()
   (shell-command-to-string "./bootstrap.sh"))

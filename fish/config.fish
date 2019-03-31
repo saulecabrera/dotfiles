@@ -50,6 +50,9 @@ set -xg PATH $GOPATH/bin:$PATH
 # dev -----------------------------
 source /opt/dev/dev.fish
 
+# ERL persistent history
+set -xg ERL_AFLAGS '-kernel shell_history enabled'
+
 # Other plugins (putting them here in the meantime)
 # Theme: l
 # asdf

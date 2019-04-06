@@ -41,11 +41,14 @@ set fish_pager_color_description $nord10
 set fish_pager_color_progress $nord12
 set fish_pager_color_secondary $nord1
 
+# asdf ----------------------------
+source ~/.asdf/asdf.fish
+
 # PATHS ---------------------------
 set -xg GOPATH $HOME
 set -xg EDITOR nvim
 set -xg NVM_DIR $HOME/.nvm
-set -xg PATH $GOPATH/bin:$PATH
+set -xg PATH $GOPATH/bin $PATH
 
 # dev -----------------------------
 source /opt/dev/dev.fish

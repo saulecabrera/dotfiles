@@ -10,7 +10,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'whatyouhide/vim-gotham'
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
-Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'chriskempson/base16-vim'
 Plug 'trevordmiller/nova-vim'
 Plug 'arcticicestudio/nord-vim'
 
@@ -124,7 +124,8 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
-colorscheme nord
+let base16colorspace=256
+colorscheme base16-default-dark
 if has('gui_running')
   set macligatures "this will only work when using fonts w/ligatures i.e. Fira Code
   set guifont=Hack:h13

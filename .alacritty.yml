@@ -83,7 +83,7 @@ font:
   # Normal (roman) font face
   # Needs to be ttf, crashes otherwise
   normal:
-    family: 'Roboto Mono for Powerline'
+    family: 'Roboto Mono'
     style: Regular
 
   # Point size

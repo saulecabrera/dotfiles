@@ -83,11 +83,11 @@ font:
   # Normal (roman) font face
   # Needs to be ttf, crashes otherwise
   normal:
-    family: 'Input'
+    family: 'mononoki'
     style: Regular
 
   # Point size
-  size: 13.5
+  size: 15
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.

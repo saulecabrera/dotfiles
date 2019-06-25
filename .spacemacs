@@ -79,7 +79,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(doom-themes solarized-theme exec-path-from-shell)
+   dotspacemacs-additional-packages '(doom-themes solarized-theme exec-path-from-shell lsp-elixir)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -476,6 +476,7 @@ before packages are loaded."
   (custom/web)
   (custom/magit)
   (add-hook 'dired-mode-hook 'custom/dired)
+  (add-hook 'elixir-mode-hook 'lsp)
 
   (setq git-gutter-fr+-side 'left-fringe)
 
@@ -493,8 +494,7 @@ before packages are loaded."
 
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize))
-
-  (custom/lsp-elixir))
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -541,16 +541,6 @@ This function is called at the very end of Spacemacs initialization."
   (setq web-mode-markup-indent-offset 2)
   (setq js-indent-level 2)
   (setq-default typescript-indent-level 2))
-
-(defun custom/lsp-elixir ()
-  (use-package lsp-mode
-    :commands lsp
-    :ensure t
-    :diminish lsp-mode
-    :hook
-    (elixir-mode . lsp)
-    :init
-    (add-to-list 'exec-path "~/Developer/elixir-ls/release/")))
 
 (defun dotfiles/bootstrap ()
   (shell-command-to-string "./bootstrap.sh"))

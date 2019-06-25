@@ -79,13 +79,13 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(doom-themes solarized-theme exec-path-from-shell lsp-elixir)
+   dotspacemacs-additional-packages '(doom-themes solarized-theme exec-path-from-shell)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(alchemist)
+   dotspacemacs-excluded-packages '()
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -476,7 +476,6 @@ before packages are loaded."
   (custom/web)
   (custom/magit)
   (add-hook 'dired-mode-hook 'custom/dired)
-  (add-hook 'elixir-mode-hook 'lsp)
 
   (setq git-gutter-fr+-side 'left-fringe)
 

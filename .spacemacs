@@ -42,18 +42,22 @@ This function should only modify configuration layer settings."
      ;; brew intsall rg
      ivy
      org
+
      html
      javascript
      typescript
      react
+
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-complete-enable-sort-by-usage t)
-     lsp
      elixir
-     (elm :variables elm-sort-imports-on-save t)
      erlang
+
+     (elm :variables elm-sort-imports-on-save t)
+
      emacs-lisp
+
      git
      (version-control :variables
                       version-control-diff-tool 'git-gutter+
@@ -79,7 +83,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(doom-themes solarized-theme exec-path-from-shell)
+   dotspacemacs-additional-packages '(doom-themes solarized-theme exec-path-from-shell eglot)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -476,6 +480,9 @@ before packages are loaded."
   (custom/web)
   (custom/magit)
   (add-hook 'dired-mode-hook 'custom/dired)
+
+  ;; gem install solargraph
+  (add-hook 'ruby-mode-hook 'eglot-ensure)
 
   (setq git-gutter-fr+-side 'left-fringe)
 

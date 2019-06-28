@@ -2,6 +2,7 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+
 (defun dotspacemacs/layers ()
   "Layer configuration:
 This function should only modify configuration layer settings."
@@ -89,7 +90,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(alchemist)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -479,11 +480,10 @@ before packages are loaded."
 
   (custom/web)
   (custom/magit)
+  (custom/eglot)
   (add-hook 'dired-mode-hook 'custom/dired)
 
-  ;; gem install solargraph
-  (add-hook 'ruby-mode-hook 'eglot-ensure)
-
+  
   (setq git-gutter-fr+-side 'left-fringe)
 
   (doom-themes-visual-bell-config)
@@ -550,3 +550,20 @@ This function is called at the very end of Spacemacs initialization."
 
 (defun dotfiles/bootstrap ()
   (shell-command-to-string "./bootstrap.sh"))
+
+(defvar elixir-language-server-path
+  "~/Developer/elixir-ls/release/language_server.sh")
+
+(defun custom/eglot ()
+  (require 'eglot)
+  ;; gem install solargraph
+  (add-hook 'ruby-mode-hook 'eglot-ensure)
+
+  ;; follow instructions at https://github.com/JakeBecker/elixir-ls
+  (add-to-list 'eglot-server-programs `(elixir-mode . (,elixir-language-server-path)))
+  (add-hook 'elixir-mode-hook 'eglot-ensure)
+
+  (spacemacs/declare-prefix-for-mode 'elixir-mode "o" "custom")
+  (spacemacs/set-leader-keys-for-major-mode 'elixir-mode "oh" 'eglot-help-at-point)
+  )
+

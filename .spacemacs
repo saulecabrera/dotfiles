@@ -563,7 +563,7 @@ This function is called at the very end of Spacemacs initialization."
   (add-to-list 'eglot-server-programs `(elixir-mode . (,elixir-language-server-path)))
   (add-hook 'elixir-mode-hook 'eglot-ensure)
 
-  (spacemacs/declare-prefix-for-mode 'elixir-mode "o" "custom")
   (spacemacs/set-leader-keys-for-major-mode 'elixir-mode "oh" 'eglot-help-at-point)
+  (spacemacs/set-leader-keys-for-major-mode 'elixir-mode "og" 'xref-find-definitions)
   )
 

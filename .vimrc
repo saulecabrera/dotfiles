@@ -125,7 +125,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
 let base16colorspace=256
-colorscheme base16-default-dark
+colorscheme nord
 if has('gui_running')
   set macligatures "this will only work when using fonts w/ligatures i.e. Fira Code
   set guifont=Hack:h13
@@ -165,7 +165,7 @@ let g:airline_right_sep = ' '
 let g:airline_inactive_collapse = 1
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_normal_green = 1
-let g:airline_theme = 'solarized'
+" let g:airline_theme = 'solarized'
 set laststatus=2 "for vim-airline to work
 
 " Prevent mix recompile with ale

@@ -74,6 +74,7 @@ This function should only modify configuration layer settings."
      yaml
      ruby
      ruby-on-rails
+     rust
      osx
      )
 

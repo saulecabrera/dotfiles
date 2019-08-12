@@ -63,7 +63,8 @@ This function should only modify configuration layer settings."
      (version-control :variables
                       version-control-diff-tool 'git-gutter+
                       version-control-global-margin t)
-     markdown
+     ;; npm install -g vmd
+     (markdown :variables markdown-live-preview-engine 'vmd)
      neotree
      docker
      (shell :variables

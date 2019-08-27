@@ -75,6 +75,7 @@ This function should only modify configuration layer settings."
      yaml
      ruby
      ruby-on-rails
+     ;; install racer for completion
      rust
      osx
      )

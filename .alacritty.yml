@@ -84,7 +84,7 @@ font:
   # Needs to be ttf, crashes otherwise
   normal:
     family: 'Operator Mono'
-    style: Book
+    style: Light
 
   # Point size
   size: 14

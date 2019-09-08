@@ -486,7 +486,6 @@ before packages are loaded."
   (custom/eglot)
   (add-hook 'dired-mode-hook 'custom/dired)
 
-  
   (setq git-gutter-fr+-side 'left-fringe)
 
   (doom-themes-visual-bell-config)

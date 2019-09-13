@@ -125,7 +125,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
 let base16colorspace=256
-colorscheme gotham
+colorscheme base16-tomorrow-night
 if has('gui_running')
   set macligatures "this will only work when using fonts w/ligatures i.e. Fira Code
   set guifont=Hack:h13

@@ -83,11 +83,11 @@ font:
   # Normal (roman) font face
   # Needs to be ttf, crashes otherwise
   normal:
-    family: 'SF Mono'
+    family: 'Monaco'
     style: Regular
 
   # Point size
-  size: 13
+  size: 12
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.

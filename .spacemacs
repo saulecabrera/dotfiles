@@ -229,8 +229,8 @@ It should only modify the values of Spacemacs settings."
    ;; quickly tweak the mode-line size to make separators look not too crappy.
 
    ;; defaults write org.gnu.Emacs AppleFontSmoothing -int 0
-   dotspacemacs-default-font '("Consolas"
-                               :size 14
+   dotspacemacs-default-font '("Meslo LG S"
+                               :size 13
                                :weight normal
                                :width normal)
 

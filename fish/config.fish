@@ -22,12 +22,12 @@ source ~/.asdf/asdf.fish
 
 # PATHS ---------------------------
 set -xg GOPATH $HOME
-set -xg SCRIPTS_CLI $HOME/src/github.com/Shopify/scripts-cli
+set -xg SHOPIFY_TEMP_CLI $HOME/src/github.com/Shopify/temp-shopify-app-cli
 set -xg ELIXIR_LANG_SERVER_PATH $HOME/Developer/elixir-ls/release
 set -xg EDITOR emacs -nw
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin $PATH
-set -xg PATH $SCRIPTS_CLI/exe $PATH
+set -xg PATH $SHOPIFY_TEMP_CLI/bin $PATH
 
 # dev -----------------------------
 source /opt/dev/dev.fish

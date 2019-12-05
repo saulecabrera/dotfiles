@@ -1,4 +1,10 @@
-fish_vi_key_bindings
+# Only perform vim keybindings when
+# the terminal is interactive to
+# silence warnings in emacs shell for example
+
+if status is-interactive
+    fish_vi_key_bindings
+end
 
 # Tomorrow Night Theme
 set fish_color_normal dedede

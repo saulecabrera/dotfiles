@@ -504,6 +504,10 @@ before packages are loaded."
 
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize))
+
+  (unless window-system
+    (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
+    (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

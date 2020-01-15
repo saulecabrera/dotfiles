@@ -7,6 +7,7 @@
 	helper = osxkeychain
 [core]
 	editor = emacs
+	commitGraph = true
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
@@ -21,3 +22,9 @@
   aliases = config --get-regexp alias
   branches = branch -a
   remotes = remote -v
+[diff]
+	algorithm = patience
+[gc]
+	writeCommitGraph = true
+[protocol]
+	version = 2

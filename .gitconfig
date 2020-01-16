@@ -6,7 +6,7 @@
 [credential]
 	helper = osxkeychain
 [core]
-	editor = emacs
+	editor = vim
 	commitGraph = true
 [filter "lfs"]
 	clean = git-lfs clean %f

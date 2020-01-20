@@ -2,3 +2,10 @@ source ~/intelli-space/spacemacs.vim
 source ~/intelli-space/extra.vim
 source ~/intelli-space/major.vim
 source ~/intelli-space/hybrid.vim
+
+nnoremap <Leader>ss eaction SearchEverywhere<CR>
+nnoremap <Leader>sp :action FindInPath<CR>
+
+nnoremap == :action ReformatCode<CR>
+vnoremap == :action ReformatCode<CR>
+

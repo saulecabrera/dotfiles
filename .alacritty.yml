@@ -83,7 +83,7 @@ font:
   # Normal (roman) font face
   # Needs to be ttf, crashes otherwise
   normal:
-    family: 'JetBrains Mono'
+    family: 'Input'
     style: Regular
 
   # Point size

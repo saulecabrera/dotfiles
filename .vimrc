@@ -125,7 +125,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
 let base16colorspace=256
-colorscheme base16-tomorrow-night
+colorscheme solarized
 if has('gui_running')
   set macligatures "this will only work when using fonts w/ligatures i.e. Fira Code
   set guifont=Hack:h13
@@ -136,7 +136,7 @@ if has('gui_running')
 else
   let g:solarized_termcolors=16
 endif
-set background=dark
+set background=light
 set cursorline
 set number
 syntax on

@@ -3,25 +3,15 @@
 # silence warnings in emacs shell for example
 
 if status is-interactive
-    fish_vi_key_bindings
+  fish_vi_key_bindings
 end
 
-# Tomorrow Night Theme
-set fish_color_normal dedede
-set fish_color_command 7aa6da
-set fish_color_quote e78c45
-set fish_color_redirection c397d8
-set fish_color_end c397d8
-set fish_color_error d54e53
-set fish_color_param ffffff
-set fish_color_comment 999999
-set fish_color_match 70c0b1
-set fish_color_search_match c397d8
-set fish_color_operator 70c0b1
-set fish_color_escape 70c0b1
-set fish_color_cwd b9ca4a
+set theme_color_scheme solarized-light
+set -g theme_nerd_fonts no
+set -g theme_display_date no
 
-
+set fish_color_command 268bd2
+set fish_color_autosuggestion 839496
 
 # asdf ----------------------------
 source ~/.asdf/asdf.fish

@@ -24,6 +24,7 @@ set -xg EDITOR emacs -nw
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin $PATH
 set -xg PATH $SHOPIFY_TEMP_CLI/bin $PATH
+set -xg BAT_THEME ansi-light
 
 # dev -----------------------------
 source /opt/dev/dev.fish

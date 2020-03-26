@@ -8,6 +8,7 @@ end
 
 set theme_color_scheme solarized-light
 set -g theme_nerd_fonts no
+set -g theme_powerline_fonts no
 set -g theme_display_date no
 
 set fish_color_command 268bd2

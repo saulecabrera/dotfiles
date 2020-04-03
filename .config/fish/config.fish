@@ -6,13 +6,10 @@ if status is-interactive
   fish_vi_key_bindings
 end
 
-set theme_color_scheme solarized-light
+set theme_color_scheme gruvbox
 set -g theme_nerd_fonts no
 set -g theme_powerline_fonts no
 set -g theme_display_date no
-
-set fish_color_command 268bd2
-set fish_color_autosuggestion 839496
 
 # asdf ----------------------------
 source ~/.asdf/asdf.fish

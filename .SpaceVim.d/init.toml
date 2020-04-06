@@ -1,19 +1,33 @@
 [options]
-    colorscheme = "gruvbox"
-    colorscheme_bg = "dark"
-    enable_guicolors = true
-    statusline_separator = "nil"
-    statusline_inactive_separator = "nil"
-    buffer_index_type = 4
-    enable_tabline_filetype_icon = true
-    enable_statusline_mode = false
-    autocomplete_method = 'coc'
-    statusline_unicode_symbols = false
+  colorscheme = "gruvbox"
+  colorscheme_bg = "dark"
+  enable_guicolors = true
+  statusline_separator = "nil"
+  statusline_inactive_separator = "nil"
+  buffer_index_type = 4
+  enable_tabline_filetype_icon = true
+  enable_statusline_mode = false
+  autocomplete_method = 'coc'
+  statusline_unicode_symbols = false
+  enable_neomake = false
+  enable_ale = true
 
 [[layers]]
   name = 'autocomplete'
   auto-completion-return-key-behavior = "complete"
   auto-completion-tab-key-behavior = "smart"
+
+[[layers]]
+  name = 'lsp'
+  filetypes = [
+    'typescript', # npm i -g typescript-language-server
+    'ruby'
+  ]
+  [layers.override_cmd]
+    ruby = ["solargraph", "stdio"]
+
+[[layers]]
+  name = 'lsp'
 
 [[layers]]
   name = 'fzf'
@@ -55,7 +69,6 @@
 
 [[layers]]
   name = 'lang#typescript'
-  typescript_server_path = 'usr/local/bin/tsserver'
 
 [[layers]]
   name = 'lang#vim'
@@ -79,4 +92,8 @@
 
 [[custom_plugins]]
   name = "junegunn/goyo.vim"
+  merged = false
+
+[[custom_plugins]]
+  name = "jreybert/vimagit"
   merged = false

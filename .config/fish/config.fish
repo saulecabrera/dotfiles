@@ -18,11 +18,13 @@ source ~/.asdf/asdf.fish
 set -xg GOPATH $HOME
 set -xg SHOPIFY_TEMP_CLI $HOME/src/github.com/Shopify/temp-shopify-app-cli
 set -xg ELIXIR_LANG_SERVER_PATH $HOME/Developer/elixir-ls/release
-set -xg EDITOR emacs -nw
+set -xg EDITOR nvim
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin $PATH
 set -xg PATH $SHOPIFY_TEMP_CLI/bin $PATH
 set -xg BAT_THEME ansi-dark
+
+alias vim="nvim"
 
 # dev -----------------------------
 source /opt/dev/dev.fish

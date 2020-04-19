@@ -85,6 +85,12 @@
 [[layers]]
   name = 'tmux'
 
+[[layers]]
+  name = "lang#haskell"
+
+[[layers]]
+  name = "lang#ocaml"
+
 
 [[custom_plugins]]
   name = 'chriskempson/base16-vim'

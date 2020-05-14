@@ -91,6 +91,13 @@
 [[layers]]
   name = "lang#ocaml"
 
+[[layers]]
+  name = "lang#fsharp"
+
+[[layers]]
+  name = "core#tabline"
+  enable = false
+
 
 [[custom_plugins]]
   name = 'chriskempson/base16-vim'

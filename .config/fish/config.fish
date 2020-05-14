@@ -37,3 +37,6 @@ set -xg ERL_AFLAGS '-kernel shell_history enabled'
 # asdf
 # z
 # nvm
+
+# opam configuration
+source /Users/saulecabrera/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

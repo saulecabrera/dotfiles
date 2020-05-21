@@ -25,6 +25,7 @@ set -xg PATH $SHOPIFY_TEMP_CLI/bin $PATH
 set -xg BAT_THEME ansi-dark
 
 alias vim="nvim"
+alias gcbr="git rev-parse --abbrev-ref HEAD"
 
 # dev -----------------------------
 source /opt/dev/dev.fish

@@ -59,6 +59,9 @@
 [[layers]]
   name = 'lang#erlang'
 
+[[layers]]
+  name = 'lang#toml'
+
 # Depends on:
 # - Depending on how you manage your dependencies:
 #   - Simple `gem install solargraph` or 

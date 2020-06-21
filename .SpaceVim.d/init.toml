@@ -13,6 +13,8 @@
   enable_neomake = false
   enable_ale = true
 
+  disabled_plugins = ["slashmili/alchemist.vim"]
+
 [[layers]]
   name = 'autocomplete'
   auto-completion-return-key-behavior = "complete"
@@ -112,4 +114,8 @@
 
 [[custom_plugins]]
   name = "jreybert/vimagit"
+  merged = false
+
+[[custom_plugins]]
+  name = "amiralies/coc-elixir"
   merged = false

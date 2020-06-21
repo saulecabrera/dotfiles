@@ -1,4 +1,5 @@
 [options]
+  bootstrap_after = "myspacevim#after"
   colorscheme = "gruvbox"
   colorscheme_bg = "dark"
   enable_guicolors = true

@@ -26,6 +26,7 @@ set -xg BAT_THEME ansi-dark
 
 alias vim="nvim"
 alias gcbr="git rev-parse --abbrev-ref HEAD"
+alias t="tmuxinator"
 
 # dev -----------------------------
 source /opt/dev/dev.fish

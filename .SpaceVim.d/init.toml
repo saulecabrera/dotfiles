@@ -122,3 +122,7 @@
 [[custom_plugins]]
   name = "amiralies/coc-elixir"
   merged = false
+
+[[custom_plugins]]
+  name = "reasonml-editor/vim-reason-plus"
+  merged = false

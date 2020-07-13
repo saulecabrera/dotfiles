@@ -20,6 +20,7 @@
   aliases = config --get-regexp alias
   branches = branch -a
   remotes = remote -v
+  cbr = rev-parse --abbrev-ref HEAD
 [diff]
 	algorithm = patience
 [gc]

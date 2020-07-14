@@ -126,3 +126,8 @@
 [[custom_plugins]]
   name = "reasonml-editor/vim-reason-plus"
   merged = false
+
+[[custom_plugins]]
+  name = "tpope/vim-rails"
+  merged = false
+

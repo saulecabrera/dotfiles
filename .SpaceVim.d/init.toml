@@ -104,6 +104,9 @@
 [[layers]]
   name = "lang#nix"
 
+[[layers]]
+  name = "lang#coffeescript"
+
 [[custom_plugins]]
   name = 'chriskempson/base16-vim'
   merged = false
@@ -132,4 +135,6 @@
   name =  "vimwiki/vimwiki"
   merged = false
 
-
+[[custom_plugins]]
+  name = "pechorin/any-jump.vim"
+  merged = false

@@ -31,3 +31,4 @@ compinit
 # -----------------------------------
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+if [ -e /Users/saulecabrera/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/saulecabrera/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

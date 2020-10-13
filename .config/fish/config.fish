@@ -40,3 +40,6 @@ set -xg ERL_AFLAGS '-kernel shell_history enabled'
 
 # opam configuration
 source /Users/saulecabrera/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+# ghcup-env
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+test -f /Users/saulecabrera/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /Users/saulecabrera/.ghcup/bin $PATH

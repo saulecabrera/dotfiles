@@ -24,10 +24,12 @@
   name = 'lsp'
   filetypes = [
     'typescript', # npm i -g typescript-language-server
-    'ruby'
+    'ruby',
+    'haskell'
   ]
   [layers.override_cmd]
     ruby = ["solargraph", "stdio"]
+    haskell = ["haskell-language-server-wrapper", "--lsp"]
 
 [[layers]]
   name = 'lsp'

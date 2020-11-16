@@ -6,7 +6,7 @@ if status is-interactive
   fish_vi_key_bindings
 end
 
-set theme_color_scheme gruvbox
+set theme_color_scheme solarized-dark
 set -g theme_nerd_fonts no
 set -g theme_powerline_fonts no
 set -g theme_display_date no
@@ -20,7 +20,7 @@ set -xg ELIXIR_LANG_SERVER_PATH $HOME/Developer/elixir-ls/release
 set -xg EDITOR nvim
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin $PATH
-set -xg BAT_THEME ansi-dark
+set -xg BAT_THEME "Solarized (dark)"
 
 alias vim="nvim"
 alias gcbr="git rev-parse --abbrev-ref HEAD"
@@ -43,3 +43,8 @@ source /Users/saulecabrera/.opam/opam-init/init.fish > /dev/null 2> /dev/null; o
 # ghcup-env
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 test -f /Users/saulecabrera/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /Users/saulecabrera/.ghcup/bin $PATH
+
+# Wasmer
+export WASMER_DIR="/Users/saulecabrera/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths

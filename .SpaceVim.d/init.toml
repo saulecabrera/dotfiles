@@ -1,6 +1,6 @@
 [options]
   bootstrap_after = "myspacevim#after"
-  colorscheme = "gruvbox"
+  colorscheme = "NeoSolarized"
   colorscheme_bg = "dark"
   enable_guicolors = true
   statusline_separator = "nil"
@@ -8,7 +8,7 @@
   buffer_index_type = 4
   enable_tabline_filetype_icon = true
   enable_statusline_mode = false
-  autocomplete_method = 'coc'
+  autocomplete_method = 'deoplete'
   statusline_unicode_symbols = false
   enable_neomake = false
   enable_ale = true
@@ -19,20 +19,6 @@
   name = 'autocomplete'
   auto-completion-return-key-behavior = "complete"
   auto-completion-tab-key-behavior = "smart"
-
-[[layers]]
-  name = 'lsp'
-  filetypes = [
-    'typescript', # npm i -g typescript-language-server
-    'ruby',
-    'haskell'
-  ]
-  [layers.override_cmd]
-    ruby = ["solargraph", "stdio"]
-    haskell = ["haskell-language-server-wrapper", "--lsp"]
-
-[[layers]]
-  name = 'lsp'
 
 [[layers]]
   name = 'fzf'
@@ -48,9 +34,11 @@
 [[layers]]
   name = 'github'
 
-
 [[layers]]
   name = 'lang#WebAssembly'
+
+[[layers]]
+  name = 'lang#swift'
 
 [[layers]]
   name = 'lang#rust'
@@ -63,6 +51,10 @@
 
 [[layers]]
   name = 'lang#toml'
+
+[[layers]]
+  name = "lang#crystal"
+
 
 # Depends on:
 # - Depending on how you manage your dependencies:
@@ -94,9 +86,6 @@
   name = 'tmux'
 
 [[layers]]
-  name = "lang#haskell"
-
-[[layers]]
   name = "lang#ocaml"
 
 [[layers]]
@@ -122,10 +111,6 @@
   merged = false
 
 [[custom_plugins]]
-  name = "amiralies/coc-elixir"
-  merged = false
-
-[[custom_plugins]]
   name = "reasonml-editor/vim-reason-plus"
   merged = false
   
@@ -139,4 +124,24 @@
 
 [[custom_plugins]]
   name = "pechorin/any-jump.vim"
+  merged = false
+
+[[custom_plugins]]
+  name = "ollykel/v-vim"
+  merged = false
+
+[[custom_plugins]]
+  name = "icymind/NeoSolarized"
+  merged = false
+
+[[custom_plugins]]
+  name = "merlinrebrovic/focus.vim"
+  merged = false
+
+[[custom_plugins]]
+  name = "autozimu/LanguageClient-neovim"
+  merged = false
+
+[[custom_plugins]]
+  name = "neovimhaskell/haskell-vim"
   merged = false

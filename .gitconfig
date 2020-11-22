@@ -4,7 +4,7 @@
 	name = Saúl Cabrera
 	email = saulecabrera@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 	commitGraph = true
 [filter "lfs"]
 	clean = git-lfs clean %f

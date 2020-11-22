@@ -31,6 +31,7 @@ source /opt/dev/dev.fish
 
 # ERL persistent history
 set -xg ERL_AFLAGS '-kernel shell_history enabled'
+alias sd="/Users/saulecabrera/src/github.com/Shopify/shopify-app-cli/bin/shopify"
 
 # Other plugins (putting them here in the meantime)
 # Theme: l

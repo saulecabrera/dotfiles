@@ -23,4 +23,8 @@ function! myspacevim#after() abort
   
   let g:ale_linters = {'haskell': [], 'elixir': ['elixir-ls']}
   let g:ale_elixir_elixir_ls_release = '~/elixir-ls'
+
+  nmap <leader>m <Plug>(lcn-menu)
+  nmap <silent>K <Plug>(lcn-hover)
+  nmap <silent> gd <Plug>(lcn-definition)
 endfunction

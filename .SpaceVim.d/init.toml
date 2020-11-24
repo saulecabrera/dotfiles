@@ -1,7 +1,7 @@
 [options]
   bootstrap_after = "myspacevim#after"
   colorscheme = "NeoSolarized"
-  colorscheme_bg = "dark"
+  colorscheme_bg = "light"
   enable_guicolors = true
   statusline_separator = "nil"
   statusline_inactive_separator = "nil"

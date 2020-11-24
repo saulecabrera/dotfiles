@@ -107,12 +107,12 @@ debug:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Solarized Dark)
+# Colors (Solarized Light)
 colors:
   # Default colors
   primary:
-    background: '0x002b36'
-    foreground: '0x839496'
+    background: '0xfdf6e3'
+    foreground: '0x586e75'
 
   # Normal colors
   normal:
@@ -136,7 +136,7 @@ colors:
     cyan:    '0x93a1a1'
     white:   '0xfdf6e3'
 
-    # Visual Bell
+# Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
 # rung, the terminal background will be set to white and transition back to the

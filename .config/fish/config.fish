@@ -6,7 +6,7 @@ if status is-interactive
   fish_vi_key_bindings
 end
 
-set theme_color_scheme solarized-dark
+set theme_color_scheme solarized-light
 set -g theme_nerd_fonts no
 set -g theme_powerline_fonts no
 set -g theme_display_date no
@@ -20,6 +20,7 @@ set -xg ELIXIR_LANG_SERVER_PATH $HOME/Developer/elixir-ls/release
 set -xg EDITOR nvim
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin $PATH
+set -xg PATH $HOME/.local/bin $PATH
 set -xg BAT_THEME "Solarized (dark)"
 
 alias vim="nvim"
@@ -32,12 +33,6 @@ source /opt/dev/dev.fish
 # ERL persistent history
 set -xg ERL_AFLAGS '-kernel shell_history enabled'
 alias sd="/Users/saulecabrera/src/github.com/Shopify/shopify-app-cli/bin/shopify"
-
-# Other plugins (putting them here in the meantime)
-# Theme: l
-# asdf
-# z
-# nvm
 
 # opam configuration
 source /Users/saulecabrera/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

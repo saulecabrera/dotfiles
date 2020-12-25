@@ -6,7 +6,7 @@ if status is-interactive
   fish_vi_key_bindings
 end
 
-set theme_color_scheme solarized-light
+set theme_color_scheme gruvbox
 set -g theme_nerd_fonts no
 set -g theme_powerline_fonts no
 set -g theme_display_date no
@@ -21,7 +21,7 @@ set -xg EDITOR nvim
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin $PATH
 set -xg PATH $HOME/.local/bin $PATH
-set -xg BAT_THEME "Solarized (dark)"
+set -xg BAT_THEME gruvbox
 
 alias vim="nvim"
 alias gcbr="git rev-parse --abbrev-ref HEAD"

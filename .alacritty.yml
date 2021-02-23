@@ -71,11 +71,11 @@ font:
   # Normal (roman) font face
   # Needs to be ttf, crashes otherwise
   normal:
-    family: 'JetBrains Mono'
+    family: 'PragmataPro Mono Liga'
     style: Regular
 
   # Point size
-  size: 12
+  size: 13
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -158,7 +158,7 @@ colors:
 #   - Linear
 #
 # Specifying a `duration` of `0` will disable the visual bell.
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
 

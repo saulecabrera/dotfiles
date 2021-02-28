@@ -27,9 +27,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-" Icons
-Plug 'ryanoasis/vim-devicons'
-
 " Comments
 Plug 'scrooloose/nerdcommenter'
 
@@ -38,6 +35,9 @@ Plug 'jreybert/vimagit'
 
 " Window Management
 Plug 'spolu/dwm.vim'
+
+" Haskell
+ Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
 syntax on
@@ -61,6 +61,9 @@ set visualbell
 
 " Encoding
 set encoding=utf-8
+
+" Mouse
+set mouse=a
 
 " Whitespace
 set wrap
@@ -171,3 +174,17 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+
+" NERDTree
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }

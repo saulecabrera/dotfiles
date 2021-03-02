@@ -3,8 +3,10 @@ filetype off
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Ctrl-P - Fuzzy file search
-Plug 'kien/ctrlp.vim'
+" FZF
+" brew install ripgrep
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Neomake build tool (mapped below to <c-b>)
 Plug 'benekastah/neomake'
@@ -23,9 +25,7 @@ Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Tree
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'tpope/vim-vinegar'
 
 " Comments
 Plug 'scrooloose/nerdcommenter'
@@ -37,7 +37,18 @@ Plug 'jreybert/vimagit'
 Plug 'spolu/dwm.vim'
 
 " Haskell
- Plug 'neovimhaskell/haskell-vim'
+Plug 'neovimhaskell/haskell-vim'
+
+" Ocaml
+Plug 'ocaml/vim-ocaml'
+
+" Ruby
+Plug 'vim-ruby/vim-ruby'
+
+" Zen
+Plug 'junegunn/goyo.vim'
+Plug 'amix/vim-zenroom2'
+
 call plug#end()
 
 syntax on
@@ -132,22 +143,10 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark='medium'
 set termguicolors
 
-" ctrlp
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" FZF
+map <silent> <leader>f :Files<CR>
+map <silent> <leader>s :Rg<CR>
 
-" Highlight currently open buffer in NERDTree
-function! IsNERDTreeOpen()
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-function! SyncTree()
-  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
-
-autocmd BufEnter * call SyncTree()
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
@@ -175,16 +174,9 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" Folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 
-" NERDTree
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }

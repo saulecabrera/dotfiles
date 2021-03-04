@@ -182,4 +182,11 @@ set foldlevel=2
 
 
 " Magit
-nmap <silent> gs :Magit<CR>
+nnoremap <silent> <leader>gs :Magit<CR>
+
+" Windows
+nnoremap <silent> <leader>wc :call DWM_New()<CR>
+nnoremap <silent> <leader>wr :call DWM_Rotate(1)<CR>
+nnoremap <silent> <leader>wn <C-W>w
+nnoremap <silent> <leader>wf :call DWM_Focus()<CR>
+

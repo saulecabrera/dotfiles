@@ -3,10 +3,11 @@ filetype off
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-" FZF
+" Telescope
 " brew install ripgrep
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Neomake build tool (mapped below to <c-b>)
 Plug 'benekastah/neomake'
@@ -143,9 +144,9 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark='medium'
 set termguicolors
 
-" FZF
-map <silent> <leader>f :Files<CR>
-map <silent> <leader>s :Rg<CR>
+" Telescope
+map <silent> <leader>ff <cmd>Telescope find_files<cr>
+map <silent> <leader>fs <cmd>Telescope live_grep<cr>
 
 
 " don't give |ins-completion-menu| messages.
@@ -183,6 +184,10 @@ set foldlevel=2
 
 " Magit
 nnoremap <silent> <leader>gs :Magit<CR>
+
+" Commits
+nnoremap <silent> <leader>gh <cmd>Telescope git_commits<cr>
+nnoremap <silent> <leader>gb <cmd>Telescope git_bcommits<cr>
 
 " Windows
 nnoremap <silent> <leader>wc :call DWM_New()<CR>

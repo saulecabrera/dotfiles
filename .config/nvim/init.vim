@@ -29,7 +29,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-vinegar'
 
 " Comments
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 " Git
 Plug 'jreybert/vimagit'
@@ -49,6 +49,9 @@ Plug 'vim-ruby/vim-ruby'
 " Zen
 Plug 'junegunn/goyo.vim'
 Plug 'amix/vim-zenroom2'
+
+" Hop
+Plug 'delphinus/hop.nvim'
 
 call plug#end()
 
@@ -195,3 +198,7 @@ nnoremap <silent> <leader>wr :call DWM_Rotate(1)<CR>
 nnoremap <silent> <leader>wn <C-W>w
 nnoremap <silent> <leader>wf :call DWM_Focus()<CR>
 
+" Hop
+nnoremap <leader>hw :HopWord<cr>
+nnoremap <leader>hl :HopLine<cr>
+nnoremap <leader>s :HopPattern<cr>

@@ -3,6 +3,10 @@ filetype off
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+
+" CocInstall coc-rust-analyzer
+" To enable rust support
+
 " Telescope
 " brew install ripgrep
 Plug 'nvim-lua/popup.nvim'
@@ -16,11 +20,13 @@ Plug 'benekastah/neomake'
 Plug 'thirtythreeforty/lessspace.vim'
 
 " Status bar mods
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 
 " Theme
 Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-solarized8'
 
 " Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -53,6 +59,14 @@ Plug 'amix/vim-zenroom2'
 " Hop
 Plug 'delphinus/hop.nvim'
 
+" TOML
+Plug 'cespare/vim-toml'
+
+" Elixir
+" Also :CocInstall coc-elixir
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+Plug 'elixir-editors/vim-elixir'
+
 call plug#end()
 
 syntax on
@@ -61,6 +75,9 @@ syntax on
 filetype plugin indent on
 
 let mapleader = ","
+
+"Clipboard
+set clipboard=unnamedplus
 
 " Security
 set modelines=0
@@ -141,11 +158,14 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Color scheme (terminal)
-set t_Co=256
-set background=dark
-colorscheme gruvbox
-let g:gruvbox_contrast_dark='medium'
+" set t_Co=256
 set termguicolors
+set background=dark
+colorscheme solarized8_flat
+let g:gruvbox_contrast_dark='medium'
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Telescope
 map <silent> <leader>ff <cmd>Telescope find_files<cr>
@@ -202,3 +222,7 @@ nnoremap <silent> <leader>wf :call DWM_Focus()<CR>
 nnoremap <leader>hw :HopWord<cr>
 nnoremap <leader>hl :HopLine<cr>
 nnoremap <leader>s :HopPattern<cr>
+
+
+" Last Buffer
+nnoremap <leader><tab> :e#<cr>

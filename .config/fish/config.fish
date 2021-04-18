@@ -21,11 +21,10 @@ set -xg EDITOR nvim
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin $PATH
 set -xg PATH $HOME/.local/bin $PATH
-set -xg BAT_THEME gruvbox
+set -xg BAT_THEME "Solarized (light)"
 
 alias vim="nvim"
 alias gcbr="git rev-parse --abbrev-ref HEAD"
-alias t="tmuxinator"
 
 # dev -----------------------------
 source /opt/dev/dev.fish

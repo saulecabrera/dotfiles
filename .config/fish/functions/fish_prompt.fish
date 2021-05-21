@@ -1,1 +1,1 @@
-/Users/saulecabrera/.local/share/omf/themes/bongnoster/fish_prompt.fish
+/Users/saulecabrera/.local/share/omf/themes/boxfish/fish_prompt.fish

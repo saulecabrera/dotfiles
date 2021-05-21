@@ -7,11 +7,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 " CocInstall coc-rust-analyzer
 " To enable rust support
 
-" Telescope
-" brew install ripgrep
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+" Files
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Neomake build tool (mapped below to <c-b>)
 Plug 'benekastah/neomake'
@@ -27,6 +25,7 @@ Plug 'airblade/vim-gitgutter'
 " Theme
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
+Plug 'chriskempson/base16-vim'
 
 " Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -52,10 +51,6 @@ Plug 'ocaml/vim-ocaml'
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 
-" Zen
-Plug 'junegunn/goyo.vim'
-Plug 'amix/vim-zenroom2'
-
 " Hop
 Plug 'delphinus/hop.nvim'
 
@@ -66,6 +61,9 @@ Plug 'cespare/vim-toml'
 " Also :CocInstall coc-elixir
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-editors/vim-elixir'
+
+" Zen
+Plug 'folke/zen-mode.nvim'
 
 call plug#end()
 
@@ -160,16 +158,18 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " Color scheme (terminal)
 " set t_Co=256
 set termguicolors
-set background=dark
-colorscheme solarized8_flat
+colorscheme base16-tomorrow-night
 let g:gruvbox_contrast_dark='medium'
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Telescope
-map <silent> <leader>ff <cmd>Telescope find_files<cr>
-map <silent> <leader>fs <cmd>Telescope live_grep<cr>
+map <silent> <leader>ff <cmd>:Files<cr>
+map <silent> <leader>fs <cmd>:Rg<cr>
+map <silent> <leader>gf <cmd>:GitFiles?<cr>
+map <silent> <leader>gc <cmd>:Commits<cr>
+map <silent> <leader>gbc <cmd>:BCommits<cr>
 
 
 " don't give |ins-completion-menu| messages.
@@ -208,9 +208,6 @@ set foldlevel=2
 " Magit
 nnoremap <silent> <leader>gs :Magit<CR>
 
-" Commits
-nnoremap <silent> <leader>gh <cmd>Telescope git_commits<cr>
-nnoremap <silent> <leader>gb <cmd>Telescope git_bcommits<cr>
 
 " Windows
 nnoremap <silent> <leader>wc :call DWM_New()<CR>

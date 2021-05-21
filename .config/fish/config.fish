@@ -21,7 +21,7 @@ set -xg EDITOR nvim
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin $PATH
 set -xg PATH $HOME/.local/bin $PATH
-set -xg BAT_THEME "Solarized (light)"
+set -xg BAT_THEME "base16-256"
 
 alias vim="nvim"
 alias gcbr="git rev-parse --abbrev-ref HEAD"
@@ -32,6 +32,7 @@ source /opt/dev/dev.fish
 # ERL persistent history
 set -xg ERL_AFLAGS '-kernel shell_history enabled'
 alias sd="/Users/saulecabrera/src/github.com/Shopify/shopify-app-cli/bin/shopify"
+alias cl="clear"
 
 # opam configuration
 source /Users/saulecabrera/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
@@ -43,3 +44,7 @@ test -f /Users/saulecabrera/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /User
 export WASMER_DIR="/Users/saulecabrera/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths
+
+set -gx WASMTIME_HOME "$HOME/.wasmtime"
+
+string match -r ".wasmtime" "$PATH" > /dev/null; or set -gx PATH "$WASMTIME_HOME/bin" $PATH

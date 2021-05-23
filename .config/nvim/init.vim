@@ -38,6 +38,7 @@ Plug 'tpope/vim-commentary'
 
 " Git
 Plug 'jreybert/vimagit'
+Plug 'f-person/git-blame.nvim'
 
 " Window Management
 Plug 'spolu/dwm.vim'
@@ -111,10 +112,6 @@ set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim
 
-" Move up/down editor lines
-nnoremap j gj
-nnoremap k gk
-
 " Allow hidden buffers
 set hidden
 
@@ -136,24 +133,9 @@ set incsearch
 set ignorecase
 set smartcase
 set showmatch
-map <leader><space> :let @/=''<cr> " clear search
-
-" Remap help key.
-inoremap <F1> <ESC>:set invfullscreen<CR>a
-nnoremap <F1> :set invfullscreen<CR>
-vnoremap <F1> :set invfullscreen<CR>
-
-" Textmate holdouts
-
-" Formatting
-map <leader>q gqip
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
-" Uncomment this to enable by default:
-" set list " To enable by default
-" Or use your leader key + l to toggle on/off
-map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Color scheme (terminal)
 " set t_Co=256
@@ -164,10 +146,13 @@ let g:gruvbox_contrast_dark='medium'
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-" Telescope
+" Files
 map <silent> <leader>ff <cmd>:Files<cr>
-map <silent> <leader>fs <cmd>:Rg<cr>
-map <silent> <leader>gf <cmd>:GitFiles?<cr>
+map <silent> <leader>f/ <cmd>:Rg<cr>
+map <silent> <leader>fr <cmd>:Buffers<cr>
+
+" Git
+map <silent> <leader>gs <cmd>:GitFiles?<cr>
 map <silent> <leader>gc <cmd>:Commits<cr>
 map <silent> <leader>gbc <cmd>:BCommits<cr>
 
@@ -206,20 +191,26 @@ set foldlevel=2
 
 
 " Magit
-nnoremap <silent> <leader>gs :Magit<CR>
+nnoremap <silent> <leader>m :Magit<CR>
 
 
 " Windows
-nnoremap <silent> <leader>wc :call DWM_New()<CR>
+nnoremap <silent> <leader>wn :call DWM_New()<CR>
 nnoremap <silent> <leader>wr :call DWM_Rotate(1)<CR>
-nnoremap <silent> <leader>wn <C-W>w
+nnoremap <silent> <leader>w<tab> <C-W>w
 nnoremap <silent> <leader>wf :call DWM_Focus()<CR>
+nnoremap <silent> <leader>w/ <cmd>:Windows<CR>
+nnoremap <silent> <leader>wz <cmd>:ZenMode<CR>
 
 " Hop
-nnoremap <leader>hw :HopWord<cr>
-nnoremap <leader>hl :HopLine<cr>
-nnoremap <leader>s :HopPattern<cr>
+nnoremap gw :HopWord<cr>
+nnoremap gl :HopLine<cr>
+nnoremap gs :HopPattern<cr>
 
 
 " Last Buffer
 nnoremap <leader><tab> :e#<cr>
+
+" Mappings
+
+nnoremap <leader><leader> <cmd>:Maps<CR>

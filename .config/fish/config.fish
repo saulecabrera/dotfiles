@@ -21,7 +21,7 @@ set -xg EDITOR nvim
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin $PATH
 set -xg PATH $HOME/.local/bin $PATH
-set -xg BAT_THEME "base16-256"
+set -xg BAT_THEME "gruvbox-light"
 
 alias vim="nvim"
 alias gcbr="git rev-parse --abbrev-ref HEAD"
@@ -48,3 +48,5 @@ set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths
 set -gx WASMTIME_HOME "$HOME/.wasmtime"
 
 string match -r ".wasmtime" "$PATH" > /dev/null; or set -gx PATH "$WASMTIME_HOME/bin" $PATH
+
+starship init fish | source

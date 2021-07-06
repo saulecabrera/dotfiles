@@ -66,6 +66,15 @@ Plug 'elixir-editors/vim-elixir'
 " Zen
 Plug 'folke/zen-mode.nvim'
 
+" Notes
+Plug 'vimwiki/vimwiki'
+
+" Sugar over shell commands
+Plug 'tpope/vim-eunuch'
+
+" Surround
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 syntax on
@@ -140,7 +149,8 @@ set listchars=tab:▸\ ,eol:¬
 " Color scheme (terminal)
 " set t_Co=256
 set termguicolors
-colorscheme base16-tomorrow-night
+colorscheme solarized8
+set background=light
 let g:gruvbox_contrast_dark='medium'
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -214,3 +224,12 @@ nnoremap <leader><tab> :e#<cr>
 " Mappings
 
 nnoremap <leader><leader> <cmd>:Maps<CR>
+
+" Vimwiki
+
+let wiki = {}
+let wiki.path = '~/vimwiki/'
+let wiki.nested_syntaxes = {'bash': 'bash', 'haskell': 'haskell', 'rust': 'rust'}
+let g:vimwiki_list = [wiki]
+
+

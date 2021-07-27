@@ -26,6 +26,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'chriskempson/base16-vim'
+Plug 'doums/darcula'
 
 " Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -74,6 +75,9 @@ Plug 'tpope/vim-eunuch'
 
 " Surround
 Plug 'tpope/vim-surround'
+
+" Which key
+Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
 
@@ -149,9 +153,11 @@ set listchars=tab:▸\ ,eol:¬
 " Color scheme (terminal)
 " set t_Co=256
 set termguicolors
-colorscheme solarized8
-set background=light
+colorscheme base16-tomorrow-night
+set background=dark
 let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_italicize_comments=1
+let g:airline_theme='minimalist'
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"

@@ -21,7 +21,7 @@ set -xg EDITOR nvim
 set -xg NVM_DIR $HOME/.nvm
 set -xg PATH $GOPATH/bin $PATH
 set -xg PATH $HOME/.local/bin $PATH
-set -xg BAT_THEME "gruvbox-light"
+set -xg BAT_THEME "ansi-dark"
 
 alias vim="nvim"
 alias gcbr="git rev-parse --abbrev-ref HEAD"
@@ -32,6 +32,7 @@ source /opt/dev/dev.fish
 # ERL persistent history
 set -xg ERL_AFLAGS '-kernel shell_history enabled'
 alias sd="/Users/saulecabrera/src/github.com/Shopify/shopify-app-cli/bin/shopify"
+alias jd="/Users/saulecabrera/src/github.com/Shopify/javy/target/release/javy"
 alias cl="clear"
 
 # opam configuration

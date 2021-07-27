@@ -86,7 +86,8 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
-let mapleader = ","
+let mapleader = "\<Space>"
+nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 
 "Clipboard
 set clipboard=unnamedplus

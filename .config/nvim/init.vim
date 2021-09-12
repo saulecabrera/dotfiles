@@ -27,6 +27,8 @@ Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'chriskempson/base16-vim'
 Plug 'doums/darcula'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'arcticicestudio/nord-vim'
 
 " Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -40,9 +42,6 @@ Plug 'tpope/vim-commentary'
 " Git
 Plug 'jreybert/vimagit'
 Plug 'f-person/git-blame.nvim'
-
-" Window Management
-Plug 'spolu/dwm.vim'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
@@ -78,6 +77,13 @@ Plug 'tpope/vim-surround'
 
 " Which key
 Plug 'liuchengxu/vim-which-key'
+
+" Casing operations
+Plug 'nicwest/vim-camelsnek'
+
+" Show usages
+Plug 'RRethy/vim-illuminate'
+
 
 call plug#end()
 
@@ -154,11 +160,14 @@ set listchars=tab:▸\ ,eol:¬
 " Color scheme (terminal)
 " set t_Co=256
 set termguicolors
-colorscheme base16-tomorrow-night
+colorscheme nord
 set background=dark
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italicize_comments=1
-let g:airline_theme='minimalist'
+let g:airline_theme='base16'
+let g:solarized_termcolors=256
+
+highlight Comment cterm=italic gui=italic
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -212,10 +221,23 @@ nnoremap <silent> <leader>m :Magit<CR>
 
 
 " Windows
-nnoremap <silent> <leader>wn :call DWM_New()<CR>
-nnoremap <silent> <leader>wr :call DWM_Rotate(1)<CR>
-nnoremap <silent> <leader>w<tab> <C-W>w
-nnoremap <silent> <leader>wf :call DWM_Focus()<CR>
+
+" Vertical
+nnoremap <silent> <leader>wv <C-w>v
+" Horizontal
+nnoremap <silent> <leader>ws <C-w>s
+" Cycle
+nnoremap <silent> <leader>wn <C-W>w
+" Right
+nnoremap <silent> <leader>wl <C-w>l
+" Left
+nnoremap <silent> <leader>wh <C-w>h
+" Down
+nnoremap <silent> <leader>wj <C-w>j
+" Up
+nnoremap <silent> <leader>wk <C-w>k
+
+
 nnoremap <silent> <leader>w/ <cmd>:Windows<CR>
 nnoremap <silent> <leader>wz <cmd>:ZenMode<CR>
 
@@ -237,6 +259,8 @@ nnoremap <leader><leader> <cmd>:Maps<CR>
 let wiki = {}
 let wiki.path = '~/vimwiki/'
 let wiki.nested_syntaxes = {'bash': 'bash', 'haskell': 'haskell', 'rust': 'rust'}
+let wiki.syntax = 'markdown'
+let wiki.ext = 'md'
 let g:vimwiki_list = [wiki]
 
 
